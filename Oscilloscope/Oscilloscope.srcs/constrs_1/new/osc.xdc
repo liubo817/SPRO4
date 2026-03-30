@@ -18,5 +18,5 @@ set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]]
 ```
 
 
-set_property PACKAGE_PIN Y11 [get_ports {pwm_out}]
+set_property PACKAGE_PIN W11 [get_ports {pwm_out}]
 set_property IOSTANDARD LVCMOS33 [get_ports {pwm_out}]

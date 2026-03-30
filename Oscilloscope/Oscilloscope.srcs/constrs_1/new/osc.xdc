@@ -20,3 +20,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]]
 
 set_property PACKAGE_PIN W11 [get_ports {pwm_out}]
 set_property IOSTANDARD LVCMOS33 [get_ports {pwm_out}]
+
+set_property PACKAGE_PIN E17 [get_ports vp_in]   # VP
+set_property PACKAGE_PIN E18 [get_ports vn_in]   # VN
+set_property IOSTANDARD LVCMOS33 [get_ports vp_in]
+set_property IOSTANDARD LVCMOS33 [get_ports vn_in]

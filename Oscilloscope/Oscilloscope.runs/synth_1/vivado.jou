@@ -3,11 +3,11 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon Mar 30 13:49:03 2026
-# Process ID         : 36064
+# Start of session at: Mon Mar 30 14:30:58 2026
+# Process ID         : 2904
 # Current directory  : C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1
-# Command line       : vivado.exe -log osc_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source osc_top.tcl
-# Log file           : C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1/osc_top.vds
+# Command line       : vivado.exe -log osc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source osc.tcl
+# Log file           : C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1/osc.vds
 # Journal file       : C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1\vivado.jou
 # Running On         : Viktorio
 # Platform           : Windows Server 2016 or Windows 10
@@ -19,6 +19,6 @@
 # Host memory        : 16824 MB
 # Swap memory        : 6547 MB
 # Total Virtual      : 23371 MB
-# Available Virtual  : 3374 MB
+# Available Virtual  : 2602 MB
 #-----------------------------------------------------------
-source osc_top.tcl -notrace
+source osc.tcl -notrace

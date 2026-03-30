@@ -2,15 +2,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity osc_top is
+entity osc is
     Port (
         clk         : in  std_logic;
         uart_txd    : out std_logic;
-        pwm_out     : out std_logic    -- probe this with your oscilloscope
+        pwm_out     : out std_logic;
+        vp_in       : in  std_logic;
+        vn_in       : in  std_logic
     );
-end osc_top;
+end osc;
 
-architecture Behavioral of osc_top is
+architecture Behavioral of osc is
 
     component xadc_wiz_0
         port (
@@ -89,11 +91,11 @@ begin
         port map (
             dclk_in     => clk,
             reset_in    => '0',
-            vp_in       => '0',
-            vn_in       => '0',
+            vp_in => vp_in,
+            vn_in => vn_in,
             di_in       => (others => '0'),
             daddr_in    => (others => '0'),
-            den_in      => '0',
+            den_in      => eoc,
             dwe_in      => '0',
             drdy_out    => drdy,
             do_out      => xadc_data,

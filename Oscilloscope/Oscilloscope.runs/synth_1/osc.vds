@@ -1,0 +1,286 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Mar 30 14:30:58 2026
+# Process ID         : 2904
+# Current directory  : C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1
+# Command line       : vivado.exe -log osc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source osc.tcl
+# Log file           : C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1/osc.vds
+# Journal file       : C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1\vivado.jou
+# Running On         : Viktorio
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 256V
+# CPU Frequency      : 3302 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 8
+# Host memory        : 16824 MB
+# Swap memory        : 6547 MB
+# Total Virtual      : 23371 MB
+# Available Virtual  : 2602 MB
+#-----------------------------------------------------------
+source osc.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.srcs/utils_1/imports/synth_1/osc.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.srcs/utils_1/imports/synth_1/osc.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top osc -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 39396
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1312.223 ; gain = 541.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'osc' [C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.srcs/sources_1/new/osc.vhd:15]
+INFO: [Synth 8-3491] module 'xadc_wiz_0' declared at 'C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1/.Xil/Vivado-2904-Viktorio/realtime/xadc_wiz_0_stub.vhdl:6' bound to instance 'xadc_inst' of component 'xadc_wiz_0' [C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.srcs/sources_1/new/osc.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'xadc_wiz_0' [C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1/.Xil/Vivado-2904-Viktorio/realtime/xadc_wiz_0_stub.vhdl:29]
+INFO: [Synth 8-256] done synthesizing module 'osc' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.srcs/sources_1/new/osc.vhd:15]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1434.207 ; gain = 663.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1434.207 ; gain = 663.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1434.207 ; gain = 663.258
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1434.207 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'xadc_inst'
+Finished Parsing XDC File [c:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'xadc_inst'
+Parsing XDC File [C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.srcs/constrs_1/new/osc.xdc]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 13]]'. [C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.srcs/constrs_1/new/osc.xdc:17]
+CRITICAL WARNING: [Designutils 20-1307] Command '```' is not supported in the xdc constraint file. [C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.srcs/constrs_1/new/osc.xdc:18]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#' specified for 'objects'. [C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.srcs/constrs_1/new/osc.xdc:24]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#' specified for 'objects'. [C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.srcs/constrs_1/new/osc.xdc:25]
+Finished Parsing XDC File [C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.srcs/constrs_1/new/osc.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.srcs/constrs_1/new/osc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/osc_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/osc_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1506.277 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1506.277 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1506.277 ; gain = 735.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1506.277 ; gain = 735.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1506.277 ; gain = 735.328
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'send_state_reg' in module 'osc'
+INFO: [Synth 8-802] inferred FSM for state register 'uart_state_reg' in module 'osc'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    idle |                               00 |                               00
+               send_byte |                               01 |                               01
+                 wait_tx |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'send_state_reg' using encoding 'sequential' in module 'osc'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  u_idle |                               00 |                               00
+                 u_start |                               01 |                               01
+                  u_data |                               10 |                               10
+                  u_stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'uart_state_reg' using encoding 'User encoding' in module 'osc'
+WARNING: [Synth 8-13157] FSM with state register 'uart_state_reg' is not having reset. This may cause incorrect behavior. User should consider using FSM_SAFE_STATE attribute on the register
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1506.277 ; gain = 735.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   12 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 7     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 10    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 1     
+	   4 Input   10 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1506.277 ; gain = 735.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1631.852 ; gain = 860.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1663.156 ; gain = 892.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1663.672 ; gain = 892.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1892.844 ; gain = 1121.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1892.844 ; gain = 1121.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1892.844 ; gain = 1121.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1892.844 ; gain = 1121.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1892.844 ; gain = 1121.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1892.844 ; gain = 1121.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |xadc_wiz_0    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |xadc_wiz_0_bbox |     1|
+|2     |BUFG            |     1|
+|3     |CARRY4          |    20|
+|4     |LUT1            |     8|
+|5     |LUT2            |    37|
+|6     |LUT3            |    14|
+|7     |LUT4            |    44|
+|8     |LUT5            |    17|
+|9     |LUT6            |    24|
+|10    |MUXF7           |     3|
+|11    |FDRE            |   197|
+|12    |FDSE            |    12|
+|13    |IBUF            |     3|
+|14    |OBUF            |     2|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1892.844 ; gain = 1121.895
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1892.844 ; gain = 1049.824
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1892.844 ; gain = 1121.895
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1901.930 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1905.668 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 89a7f04
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 2 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.statsThreshold
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1905.668 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1/osc.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file osc_utilization_synth.rpt -pb osc_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 30 14:31:28 2026...

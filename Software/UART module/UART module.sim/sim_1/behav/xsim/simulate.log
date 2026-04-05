@@ -1,0 +1,11 @@
+Time resolution is 1 ps
+Note: PASS byte 0: 0x0
+Time: 10350 ns  Iteration: 0  Process: /uart_top_tb/p_check  File: C:/Users/liubo/Documents/GitHub projects/EL_Semester_4/DDSP/UART module/UART module.srcs/sim_1/new/tb_uart.vhd
+Error: FAIL byte 1: expected 0x63 got 0x127
+Time: 20550 ns  Iteration: 0  Process: /uart_top_tb/p_check  File: C:/Users/liubo/Documents/GitHub projects/EL_Semester_4/DDSP/UART module/UART module.srcs/sim_1/new/tb_uart.vhd
+Error: FAIL byte 2: expected 0x127 got 0x255
+Time: 30750 ns  Iteration: 0  Process: /uart_top_tb/p_check  File: C:/Users/liubo/Documents/GitHub projects/EL_Semester_4/DDSP/UART module/UART module.srcs/sim_1/new/tb_uart.vhd
+Error: FAIL byte 3: expected 0x191 got 0x127
+Time: 40950 ns  Iteration: 0  Process: /uart_top_tb/p_check  File: C:/Users/liubo/Documents/GitHub projects/EL_Semester_4/DDSP/UART module/UART module.srcs/sim_1/new/tb_uart.vhd
+Note: All bytes sent
+Time: 42350 ns  Iteration: 2  Process: /uart_top_tb/p_adc  File: C:/Users/liubo/Documents/GitHub projects/EL_Semester_4/DDSP/UART module/UART module.srcs/sim_1/new/tb_uart.vhd

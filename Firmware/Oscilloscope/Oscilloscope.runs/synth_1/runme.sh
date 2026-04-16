@@ -12,9 +12,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/Apps/Vivado/2025.2/Vitis/bin;C:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/bin/nt64;C:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/lib/nt64:C:/Apps/Vivado/2025.2/Vivado/bin
+  PATH=C:/AMDDesignTools/2025.2/Vitis/bin;C:/AMDDesignTools/2025.2/Vivado/ids_lite/ISE/bin/nt64;C:/AMDDesignTools/2025.2/Vivado/ids_lite/ISE/lib/nt64:C:/AMDDesignTools/2025.2/Vivado/bin
 else
-  PATH=C:/Apps/Vivado/2025.2/Vitis/bin;C:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/bin/nt64;C:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/lib/nt64:C:/Apps/Vivado/2025.2/Vivado/bin:$PATH
+  PATH=C:/AMDDesignTools/2025.2/Vitis/bin;C:/AMDDesignTools/2025.2/Vivado/ids_lite/ISE/bin/nt64;C:/AMDDesignTools/2025.2/Vivado/ids_lite/ISE/lib/nt64:C:/AMDDesignTools/2025.2/Vivado/bin:$PATH
 fi
 export PATH
 
@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1'
+HD_PWD='C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Oscilloscope/Oscilloscope.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log osc.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source osc.tcl
+EAStep vivado -log wave_generator.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source wave_generator.tcl

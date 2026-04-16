@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Oscilloscope.srcs/sources_1/new/wave_generator.vhd" \
+"../../../../Oscilloscope.srcs/sim_1/new/tb_wave_generator.vhd" \
+
+# Do not sort compile order
+nosort

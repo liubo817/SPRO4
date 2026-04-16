@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1774873856" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/osc.dcp">
-  <File Type="PA-TCL" Name="osc.tcl"/>
-  <File Type="REPORTS-TCL" Name="osc_reports.tcl"/>
-  <File Type="RDS-RDS" Name="osc.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="osc_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="osc_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="osc_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="osc.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="osc_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="osc_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1776336623" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/osc.dcp">
+  <File Type="PA-TCL" Name="wave_generator.tcl"/>
+  <File Type="REPORTS-TCL" Name="wave_generator_reports.tcl"/>
+  <File Type="RDS-RDS" Name="wave_generator.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="wave_generator_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="wave_generator_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="wave_generator_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="wave_generator.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="wave_generator_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="wave_generator_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/osc.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/wave_generator.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -19,8 +26,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="osc"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="wave_generator"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -51,10 +57,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="xadc_wiz_0"/>
 </GenRun>

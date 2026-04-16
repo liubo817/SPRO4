@@ -3,22 +3,22 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon Mar 30 14:30:58 2026
-# Process ID         : 2904
-# Current directory  : C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1
-# Command line       : vivado.exe -log osc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source osc.tcl
-# Log file           : C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1/osc.vds
-# Journal file       : C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Oscilloscope/Oscilloscope.runs/synth_1\vivado.jou
-# Running On         : Viktorio
+# Start of session at: Thu Apr 16 12:50:25 2026
+# Process ID         : 31228
+# Current directory  : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Oscilloscope/Oscilloscope.runs/synth_1
+# Command line       : vivado.exe -log wave_generator.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source wave_generator.tcl
+# Log file           : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Oscilloscope/Oscilloscope.runs/synth_1/wave_generator.vds
+# Journal file       : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Oscilloscope/Oscilloscope.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-QU8QVCL
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26200
-# Processor Detail   : Intel(R) Core(TM) Ultra 7 256V
-# CPU Frequency      : 3302 MHz
-# CPU Physical cores : 8
-# CPU Logical cores  : 8
-# Host memory        : 16824 MB
-# Swap memory        : 6547 MB
-# Total Virtual      : 23371 MB
-# Available Virtual  : 2602 MB
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13705H
+# CPU Frequency      : 2918 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 34086 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36234 MB
+# Available Virtual  : 18273 MB
 #-----------------------------------------------------------
-source osc.tcl -notrace
+source wave_generator.tcl -notrace

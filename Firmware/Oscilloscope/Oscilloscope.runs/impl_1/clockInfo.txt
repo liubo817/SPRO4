@@ -1,7 +1,7 @@
 -------------------------------------
 | Tool Version : Vivado v.2025.2
-| Date         : Mon Mar 30 14:31:53 2026
-| Host         : Viktorio
+| Date         : Thu Apr 16 12:51:47 2026
+| Host         : DESKTOP-QU8QVCL
 | Design       : design_1
 | Device       : xc7z020-clg484-1--
 -------------------------------------

@@ -9,9 +9,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "C:/Apps/Vivado/2025.2/Vitis/bin;C:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/bin/nt64;C:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/lib/nt64;C:/Apps/Vivado/2025.2/Vivado/bin;";
+  PathVal = "C:/AMDDesignTools/2025.2/Vitis/bin;C:/AMDDesignTools/2025.2/Vivado/ids_lite/ISE/bin/nt64;C:/AMDDesignTools/2025.2/Vivado/ids_lite/ISE/lib/nt64;C:/AMDDesignTools/2025.2/Vivado/bin;";
 } else {
-  PathVal = "C:/Apps/Vivado/2025.2/Vitis/bin;C:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/bin/nt64;C:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/lib/nt64;C:/Apps/Vivado/2025.2/Vivado/bin;" + PathVal;
+  PathVal = "C:/AMDDesignTools/2025.2/Vitis/bin;C:/AMDDesignTools/2025.2/Vivado/ids_lite/ISE/bin/nt64;C:/AMDDesignTools/2025.2/Vivado/ids_lite/ISE/lib/nt64;C:/AMDDesignTools/2025.2/Vivado/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -24,7 +24,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log osc.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source osc.tcl" );
+         "-log wave_generator.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source wave_generator.tcl" );
 
 
 

@@ -1,0 +1,11 @@
+0.7
+2020.2
+Nov 14 2025
+19:37:27
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sim_1/new/tb_osc.vhd,1776426549,vhdl,,,,osc_tb,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sim_1/new/tb_wave_generator.vhd,1776426180,vhdl,,,,wave_generator_tb,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/osc.vhd,1776426033,vhdl,,,,osc,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_rx.vhd,1776426072,vhdl,,,,uart_rx,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_top.vhd,1776426092,vhdl,,,,uart_top,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_tx.vhd,1776426057,vhdl,,,,uart_tx,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/wave_generator.vhd,1776426103,vhdl,,,,wave_generator,,,,,,,,

@@ -1,0 +1,93 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Apr 17 13:53:45 2026
+# Process ID         : 13032
+# Current directory  : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent34660 C:\Users\liubo\Documents\GitHub projects\SPRO4\Firmware\uart_generation\uart_generation.xpr
+# Log file           : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/vivado.log
+# Journal file       : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation\vivado.jou
+# Running On         : DESKTOP-QU8QVCL
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13705H
+# CPU Frequency      : 2918 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 34086 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36234 MB
+# Available Virtual  : 18648 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source wave_generator_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {30000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source wave_generator_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top osc [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top osc_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+file mkdir C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1
+file mkdir C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1
+file mkdir C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new
+file mkdir C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new
+file mkdir C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new
+file mkdir C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new
+file mkdir C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1
+file mkdir {C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new}
+close [ open {C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new/osc.xdc} w ]
+add_files -fileset constrs_1 {{C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new/osc.xdc}}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+close_sim

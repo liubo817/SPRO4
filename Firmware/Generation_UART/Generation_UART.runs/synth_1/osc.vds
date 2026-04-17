@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Thu Apr 16 13:30:05 2026
-# Process ID         : 23252
+# Start of session at: Fri Apr 17 13:34:22 2026
+# Process ID         : 36492
 # Current directory  : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.runs/synth_1
 # Command line       : vivado.exe -log osc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source osc.tcl
 # Log file           : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.runs/synth_1/osc.vds
@@ -19,9 +19,10 @@
 # Host memory        : 34086 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36234 MB
-# Available Virtual  : 16660 MB
+# Available Virtual  : 17310 MB
 #-----------------------------------------------------------
 source osc.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 526.430 ; gain = 219.570
 Command: read_checkpoint -auto_incremental -incremental {C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/utils_1/imports/synth_1/osc.dcp}
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/utils_1/imports/synth_1/osc.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -33,9 +34,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1492
+INFO: [Synth 8-7075] Helper process launched with PID 2704
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1075.227 ; gain = 535.047
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1077.121 ; gain = 534.602
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'osc' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sources_1/new/osc.vhd:30]
 	Parameter G_CLK_HZ bound to: 100000000 - type: integer 
@@ -66,18 +67,18 @@ INFO: [Synth 8-638] synthesizing module 'wave_generator' [C:/Users/liubo/Documen
 INFO: [Synth 8-256] done synthesizing module 'wave_generator' (0#1) [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sources_1/imports/Firmware/Oscilloscope/Oscilloscope.srcs/sources_1/new/wave_generator.vhd:19]
 INFO: [Synth 8-256] done synthesizing module 'osc' (0#1) [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sources_1/new/osc.vhd:30]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1195.996 ; gain = 655.816
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1197.527 ; gain = 655.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1195.996 ; gain = 655.816
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1197.527 ; gain = 655.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1195.996 ; gain = 655.816
 INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1197.527 ; gain = 655.008
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
@@ -100,7 +101,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1205.188 ; gain = 665.008
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1197.527 ; gain = 655.008
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -144,20 +145,20 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1438.809 ; gain = 898.629
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:51 . Memory (MB): peak = 1439.117 ; gain = 896.598
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1438.809 ; gain = 898.629
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:51 . Memory (MB): peak = 1439.117 ; gain = 896.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1438.809 ; gain = 898.629
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:51 . Memory (MB): peak = 1439.117 ; gain = 896.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -175,37 +176,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1664.270 ; gain = 1124.090
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1664.113 ; gain = 1121.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1664.270 ; gain = 1124.090
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1664.113 ; gain = 1121.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1664.270 ; gain = 1124.090
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1664.113 ; gain = 1121.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1664.270 ; gain = 1124.090
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1664.113 ; gain = 1121.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1664.270 ; gain = 1124.090
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1664.113 ; gain = 1121.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1664.270 ; gain = 1124.090
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1664.113 ; gain = 1121.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -247,18 +248,18 @@ Report Instance Areas:
 |5     |  u_wave |wave_generator |    41|
 +------+---------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1664.270 ; gain = 1124.090
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1664.113 ; gain = 1121.594
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1664.270 ; gain = 1124.090
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1664.270 ; gain = 1124.090
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1664.113 ; gain = 1121.594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:56 . Memory (MB): peak = 1664.113 ; gain = 1121.594
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1679.352 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1680.141 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1797.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1797.977 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -266,8 +267,8 @@ Synth Design complete | Checksum: cf037d8a
 INFO: [Common 17-83] Releasing license: Synthesis
 34 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1797.520 ; gain = 1263.145
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1797.520 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:01:01 . Memory (MB): peak = 1797.977 ; gain = 1262.910
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1797.977 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.runs/synth_1/osc.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file osc_utilization_synth.rpt -pb osc_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 16 13:30:28 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 17 13:35:44 2026...

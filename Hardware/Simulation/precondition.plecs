@@ -1,0 +1,417 @@
+Plecs {
+  Name          "precondition"
+  Version       "5.0"
+  CircuitModel  "ContStateSpace"
+  StartTime     "0.0"
+  TimeSpan      "1.0"
+  Timeout       ""
+  Solver        "auto"
+  MaxStep       "1e-3"
+  InitStep      "-1"
+  FixedStep     "1e-3"
+  Refine        "1"
+  ZCStepSize    "1e-9"
+  RelTol        "1e-3"
+  AbsTol        "-1"
+  TurnOnThreshold "0"
+  NonIdealSwitchResistance "1"
+  SyncFixedStepTasks "2"
+  UseSingleCommonBaseRate "2"
+  LossVariableLimitExceededMsg "3"
+  NegativeSwitchLossMsg "3"
+  DivisionByZeroMsg "3"
+  DatatypeOverflowMsg "3"
+  DatatypeInheritanceConflictMsg "2"
+  ContSampleTimeConflictMsg "2"
+  StiffnessDetectionMsg "2"
+  MaxConsecutiveZCs "1000"
+  AlgebraicLoopWithStateMachineMsg "3"
+  AssertionAction "1"
+  FixedPointDatatypeOverride "1"
+  InitializationCommands ""
+  InitialState  "1"
+  SystemState   ""
+  JacobianComputation "2"
+  TaskingMode   "1"
+  TaskConfigurations ""
+  CodeGenParameterInlining "2"
+  CodeGenFloatingPointFormat "2"
+  CodeGenAbsTimeUsageMsg "3"
+  CodeGenBaseName ""
+  CodeGenOutputDir ""
+  CodeGenExtraOpts ""
+  CodeGenTarget "Generic"
+  CodeGenTargetSettings ""
+  ExtendedMatrixPrecision "1"
+  MatrixSignificanceCheck "2"
+  RemoveUnusedStateSpaceOutputs "2"
+  EnableStateSpaceSplitting "2"
+  DisplayStateSpaceSplitting "1"
+  DiscretizationMethod "2"
+  ExternalModeSettings ""
+  AlgebraicLoopMethod "1"
+  AlgebraicLoopTolerance "1e-6"
+  ScriptsDialogGeometry ""
+  ScriptsDialogSplitterPos "0"
+  MixedSignalSolverBypassOperatingPoint "1"
+  MixedSignalSolverInitialConditions "2"
+  MixedSignalSolverMaxNewtonIterations "25"
+  MixedSignalSolverNumThreads "-1"
+  OperatingPointMaxNewtonIterations "50"
+  OperatingPointRelativeNewtonTolerance "1e-3"
+  OperatingPointAbsoluteNewtonTolerance "1e-12"
+  OperatingPointNodalVoltageNewtonTolerance "1e-6"
+  SpiceTemperature "27"
+  NetlistParserDetails "2"
+  InvalidNetlistFunctionEvaluationMsg "1"
+  IncompatibleInitialConditionMsg "2"
+  Schematic {
+    Location      [769, 30; 1535, 868]
+    ZoomFactor    1.30957
+    SliderPosition [0, 0]
+    ShowBrowser   off
+    BrowserWidth  100
+    Component {
+      Type          Reference
+      SrcComponent  "Components/Electrical/Power Semiconductors/Drr1"
+      Name          "Drr1"
+      Show          on
+      Position      [145, 175]
+      Direction     left
+      Flipped       off
+      LabelPosition east
+      Frame         [-10, -10; 10, 10]
+      LabelFrame    [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Vf"
+        Value         "0.9"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0.04"
+        Show          off
+      }
+      Parameter {
+        Variable      "Roff"
+        Value         "1e6"
+        Show          off
+      }
+      Parameter {
+        Variable      "If0"
+        Value         "15"
+        Show          off
+      }
+      Parameter {
+        Variable      "dIrdt"
+        Value         "200e6"
+        Show          off
+      }
+      Parameter {
+        Variable      "trr"
+        Value         "74e-9"
+        Show          off
+      }
+      Parameter {
+        Variable      "Irrm"
+        Value         "6.5"
+        Show          off
+      }
+      Parameter {
+        Variable      "Qrr"
+        Value         "241e-9"
+        Show          off
+      }
+      Parameter {
+        Variable      "Lrr"
+        Value         "1e-9"
+        Show          off
+      }
+      Terminal {
+        Type          Port
+        Position      [15, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Port
+        Position      [-15, 0]
+        Direction     left
+      }
+    }
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc"
+      Show          on
+      Position      [55, 150]
+      Direction     down
+      Flipped       on
+      LabelPosition east
+      Parameter {
+        Variable      "V"
+        Value         "20"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R1"
+      Show          on
+      Position      [105, 115]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "R"
+        Value         "1e3"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R2"
+      Show          on
+      Position      [165, 115]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "R"
+        Value         "10e3"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R3"
+      Show          on
+      Position      [280, 135]
+      Direction     down
+      Flipped       off
+      LabelPosition west
+      Parameter {
+        Variable      "R"
+        Value         "180e3"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R4"
+      Show          on
+      Position      [280, 215]
+      Direction     down
+      Flipped       off
+      LabelPosition west
+      Parameter {
+        Variable      "R"
+        Value         "10e3"
+        Show          off
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "Components/Electrical/Electronics/Op-Amp"
+      Name          "Op-Amp"
+      Show          on
+      Position      [355, 180]
+      Direction     up
+      Flipped       off
+      LabelPosition north
+      Frame         [-20, -20; 20, 20]
+      Parameter {
+        Variable      "A"
+        Value         "1e6"
+        Show          off
+      }
+      Terminal {
+        Type          Port
+        Position      [-25, -10]
+        Direction     left
+      }
+      Terminal {
+        Type          Port
+        Position      [-25, 10]
+        Direction     left
+      }
+      Terminal {
+        Type          Port
+        Position      [25, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Port
+        Position      [0, 15]
+        Direction     down
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R5"
+      Show          on
+      Position      [425, 180]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "R"
+        Value         "1e3"
+        Show          off
+      }
+    }
+    Component {
+      Type          Capacitor
+      Name          "C1"
+      Show          on
+      Position      [465, 230]
+      Direction     down
+      Flipped       on
+      LabelPosition west
+      Parameter {
+        Variable      "C"
+        Value         "330e-12"
+        Show          off
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Display
+      Name          "Display"
+      Show          on
+      Position      [355, 395]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-31, -11; 31, 11]
+      Parameter {
+        Variable      "Notation"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Precision"
+        Value         "4"
+        Show          off
+      }
+    }
+    Component {
+      Type          PlecsProbe
+      Name          "Probe"
+      Show          on
+      Position      [255, 395]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Probe {
+        Component     "R5"
+        Path          ""
+        Signals       {"Resistor voltage"}
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Op-Amp"
+      SrcTerminal   2
+      Points        [325, 190; 325, 220; 405, 220; 405, 180]
+      Branch {
+        DstComponent  "R5"
+        DstTerminal   2
+      }
+      Branch {
+        DstComponent  "Op-Amp"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc"
+      SrcTerminal   1
+      Points        [55, 115]
+      DstComponent  "R1"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R1"
+      SrcTerminal   1
+      Points        [145, 115]
+      Branch {
+        DstComponent  "R2"
+        DstTerminal   2
+      }
+      Branch {
+        DstComponent  "Drr1"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R2"
+      SrcTerminal   1
+      DstComponent  "R3"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R3"
+      SrcTerminal   1
+      Points        [280, 170]
+      Branch {
+        DstComponent  "R4"
+        DstTerminal   2
+      }
+      Branch {
+        DstComponent  "Op-Amp"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R4"
+      SrcTerminal   1
+      Points        [280, 265]
+      Branch {
+        Points        [145, 265]
+        Branch {
+          Points        [55, 265]
+          DstComponent  "V_dc"
+          DstTerminal   2
+        }
+        Branch {
+          DstComponent  "Drr1"
+          DstTerminal   2
+        }
+      }
+      Branch {
+        Points        [355, 265]
+        Branch {
+          Points        [465, 265]
+          DstComponent  "C1"
+          DstTerminal   2
+        }
+        Branch {
+          DstComponent  "Op-Amp"
+          DstTerminal   4
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R5"
+      SrcTerminal   1
+      Points        [465, 180]
+      DstComponent  "C1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Probe"
+      SrcTerminal   1
+      DstComponent  "Display"
+      DstTerminal   1
+    }
+  }
+}

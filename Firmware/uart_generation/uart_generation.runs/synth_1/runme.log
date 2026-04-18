@@ -8,14 +8,14 @@
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Fri Apr 17 14:40:50 2026
+  **** Start of session at: Sat Apr 18 20:28:00 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source osc.tcl -notrace
-create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 527.562 ; gain = 221.984
-Command: read_checkpoint -auto_incremental -incremental {C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/utils_1/imports/synth_1/osc.dcp}
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/utils_1/imports/synth_1/osc.dcp for incremental synthesis
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 539.020 ; gain = 221.461
+Command: read_checkpoint -auto_incremental -incremental C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/utils_1/imports/synth_1/osc.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/utils_1/imports/synth_1/osc.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top osc -part xc7z020clg484-1
 Starting synth_design
@@ -26,83 +26,88 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 25552
+INFO: [Synth 8-7075] Helper process launched with PID 5412
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1311.078 ; gain = 541.656
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1324.879 ; gain = 541.164
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'osc' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/osc.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'osc' [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/osc.vhd:32]
 	Parameter G_CLK_HZ bound to: 100000000 - type: integer 
 	Parameter G_BAUD bound to: 115200 - type: integer 
-INFO: [Synth 8-3491] module 'uart_top' declared at 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_top.vhd:8' bound to instance 'u_uart' of component 'uart_top' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/osc.vhd:64]
-INFO: [Synth 8-638] synthesizing module 'uart_top' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_top.vhd:29]
+INFO: [Synth 8-3491] module 'uart_top' declared at 'C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_top.vhd:8' bound to instance 'u_uart' of component 'uart_top' [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/osc.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'uart_top' [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_top.vhd:29]
 	Parameter G_CLK_HZ bound to: 100000000 - type: integer 
 	Parameter G_BAUD bound to: 115200 - type: integer 
 	Parameter G_CLK_HZ bound to: 100000000 - type: integer 
 	Parameter G_BAUD bound to: 115200 - type: integer 
-INFO: [Synth 8-3491] module 'uart_tx' declared at 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_tx.vhd:9' bound to instance 'u_tx' of component 'uart_tx' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_top.vhd:63]
-INFO: [Synth 8-638] synthesizing module 'uart_tx' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_tx.vhd:24]
+INFO: [Synth 8-3491] module 'uart_tx' declared at 'C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_tx.vhd:9' bound to instance 'u_tx' of component 'uart_tx' [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_top.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'uart_tx' [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_tx.vhd:24]
 	Parameter G_CLK_HZ bound to: 100000000 - type: integer 
 	Parameter G_BAUD bound to: 115200 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'uart_tx' (0#1) [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_tx.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'uart_tx' (0#1) [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_tx.vhd:24]
 	Parameter G_CLK_HZ bound to: 100000000 - type: integer 
 	Parameter G_BAUD bound to: 115200 - type: integer 
-INFO: [Synth 8-3491] module 'uart_rx' declared at 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_rx.vhd:8' bound to instance 'u_rx' of component 'uart_rx' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_top.vhd:75]
-INFO: [Synth 8-638] synthesizing module 'uart_rx' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_rx.vhd:22]
+INFO: [Synth 8-3491] module 'uart_rx' declared at 'C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_rx.vhd:8' bound to instance 'u_rx' of component 'uart_rx' [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_top.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_rx.vhd:22]
 	Parameter G_CLK_HZ bound to: 100000000 - type: integer 
 	Parameter G_BAUD bound to: 115200 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'uart_rx' (0#1) [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_rx.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'uart_top' (0#1) [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_top.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (0#1) [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_rx.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'uart_top' (0#1) [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/uart_top.vhd:29]
+INFO: [Synth 8-3491] module 'xadc_wiz_0' declared at 'C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/synth_1/.Xil/Vivado-6240-JoniDeLaMircesti/realtime/xadc_wiz_0_stub.vhdl:6' bound to instance 'xadc_inst' of component 'xadc_wiz_0' [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/osc.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'xadc_wiz_0' [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/synth_1/.Xil/Vivado-6240-JoniDeLaMircesti/realtime/xadc_wiz_0_stub.vhdl:29]
 	Parameter CLK_DIV_N bound to: 256 - type: integer 
-INFO: [Synth 8-3491] module 'wave_generator' declared at 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/wave_generator.vhd:5' bound to instance 'u_wave' of component 'wave_generator' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/osc.vhd:81]
-INFO: [Synth 8-638] synthesizing module 'wave_generator' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/wave_generator.vhd:19]
+INFO: [Synth 8-3491] module 'wave_generator' declared at 'C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/wave_generator.vhd:5' bound to instance 'u_wave' of component 'wave_generator' [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/osc.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'wave_generator' [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/wave_generator.vhd:19]
 	Parameter CLK_DIV_N bound to: 256 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'wave_generator' (0#1) [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/wave_generator.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'osc' (0#1) [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/osc.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'wave_generator' (0#1) [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/wave_generator.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'osc' (0#1) [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/osc.vhd:32]
+WARNING: [Synth 8-3848] Net i_tx_data in module/entity osc does not have driver. [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/osc.vhd:53]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1430.348 ; gain = 660.926
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1444.027 ; gain = 660.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1430.348 ; gain = 660.926
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1444.027 ; gain = 660.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1430.348 ; gain = 660.926
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1444.027 ; gain = 660.312
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1430.348 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1444.027 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new/osc.xdc]
-Finished Parsing XDC File [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new/osc.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new/osc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/osc_propImpl.xdc].
+Parsing XDC File [c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'xadc_inst'
+Finished Parsing XDC File [c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'xadc_inst'
+Parsing XDC File [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new/osc.xdc]
+Finished Parsing XDC File [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new/osc.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new/osc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/osc_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/osc_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1491.375 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1510.145 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1491.375 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1510.145 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1491.375 ; gain = 721.953
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1510.145 ; gain = 726.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1491.375 ; gain = 721.953
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1510.145 ; gain = 726.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1491.375 ; gain = 721.953
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1510.145 ; gain = 726.430
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
@@ -125,7 +130,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1491.375 ; gain = 721.953
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1510.145 ; gain = 726.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -167,25 +172,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1492.109 ; gain = 722.688
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1510.145 ; gain = 726.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1631.016 ; gain = 861.594
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1645.168 ; gain = 861.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1663.984 ; gain = 894.562
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1676.609 ; gain = 892.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1663.984 ; gain = 894.562
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1676.609 ; gain = 892.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -203,88 +208,90 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1892.125 ; gain = 1122.703
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1904.965 ; gain = 1121.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1892.125 ; gain = 1122.703
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1904.965 ; gain = 1121.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1892.125 ; gain = 1122.703
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1904.965 ; gain = 1121.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1892.125 ; gain = 1122.703
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1904.965 ; gain = 1121.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1892.125 ; gain = 1122.703
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1904.965 ; gain = 1121.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1892.125 ; gain = 1122.703
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1904.965 ; gain = 1121.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |xadc_wiz_0    |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     1|
-|3     |LUT1   |     2|
-|4     |LUT2   |    21|
-|5     |LUT3   |    13|
-|6     |LUT4   |    21|
-|7     |LUT5   |    22|
-|8     |LUT6   |    34|
-|9     |FDCE   |    16|
-|10    |FDRE   |    66|
-|11    |FDSE   |     2|
-|12    |IBUF   |    12|
-|13    |OBUF   |    11|
-+------+-------+------+
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |xadc_wiz_0_bbox |     1|
+|2     |BUFG            |     1|
+|3     |CARRY4          |     1|
+|4     |LUT1            |     2|
+|5     |LUT2            |    20|
+|6     |LUT3            |    11|
+|7     |LUT4            |    20|
+|8     |LUT5            |    18|
+|9     |LUT6            |    31|
+|10    |FDCE            |    16|
+|11    |FDRE            |    58|
+|12    |FDSE            |     2|
+|13    |IBUF            |     6|
+|14    |OBUF            |    11|
++------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1892.125 ; gain = 1122.703
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1904.965 ; gain = 1121.250
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1892.125 ; gain = 1061.676
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1892.125 ; gain = 1122.703
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1904.965 ; gain = 1055.133
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1904.965 ; gain = 1121.250
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1901.301 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1914.129 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1904.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1917.812 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: af80dbc7
+Synth Design complete | Checksum: 727fd80e
 INFO: [Common 17-83] Releasing license: Synthesis
-39 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+41 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 1904.938 ; gain = 1368.281
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1904.938 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.runs/synth_1/osc.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1917.812 ; gain = 1365.434
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1917.812 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/synth_1/osc.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file osc_utilization_synth.rpt -pb osc_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 17 14:41:42 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 18 20:28:48 2026...

@@ -3,12 +3,12 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Thu Apr 16 16:58:00 2026
-# Process ID         : 37516
-# Current directory  : C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.runs/synth_1
+# Start of session at: Fri Apr 17 13:41:20 2026
+# Process ID         : 26028
+# Current directory  : C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.runs/synth_1
 # Command line       : vivado.exe -log osc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source osc.tcl
-# Log file           : C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.runs/synth_1/osc.vds
-# Journal file       : C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.runs/synth_1\vivado.jou
+# Log file           : C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.runs/synth_1/osc.vds
+# Journal file       : C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.runs/synth_1\vivado.jou
 # Running On         : JoniDeLaMircesti
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26200
@@ -19,6 +19,6 @@
 # Host memory        : 33492 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 35639 MB
-# Available Virtual  : 11761 MB
+# Available Virtual  : 16136 MB
 #-----------------------------------------------------------
 source osc.tcl -notrace

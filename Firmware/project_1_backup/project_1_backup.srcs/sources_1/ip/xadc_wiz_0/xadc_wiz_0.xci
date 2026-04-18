@@ -60,7 +60,7 @@
         "VCCPAUX_ALARM_UPPER": [ { "value": "1.8", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "VCCDDRO_ALARM_LOWER": [ { "value": "1.2", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "VCCDDRO_ALARM_UPPER": [ { "value": "1.25", "resolve_type": "user", "format": "float", "usage": "all" } ],
-        "SINGLE_CHANNEL_SELECTION": [ { "value": "TEMPERATURE", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "SINGLE_CHANNEL_SELECTION": [ { "value": "VP_VN", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "SINGLE_CHANNEL_ENABLE_CALIBRATION": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "BIPOLAR_OPERATION": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "SINGLE_CHANNEL_ACQUISITION_TIME": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
@@ -199,7 +199,7 @@
         "C_HAS_VCCPINT_ALARM": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_HAS_VCCPAUX_ALARM": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_HAS_VCCDDRO_ALARM": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_CONFIGURATION_R0": [ { "value": "12288", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_CONFIGURATION_R0": [ { "value": "12291", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_CONFIGURATION_R1": [ { "value": "12591", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_CONFIGURATION_R2": [ { "value": "1024", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_ALARM_LIMIT_R0": [ { "value": "46573", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -346,5 +346,5 @@
       }
     }
   },
-  "checksum": "c7074ec3"
+  "checksum": "8ede15a1"
 }

@@ -3,27 +3,26 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Tue Apr 14 11:04:41 2026
-# Process ID         : 11112
-# Current directory  : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent34912 C:\Users\liubo\Documents\GitHub projects\SPRO4\Firmware\uart\uart.xpr
-# Log file           : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/vivado.log
-# Journal file       : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart\vivado.jou
-# Running On         : DESKTOP-QU8QVCL
+# Start of session at: Fri Apr 17 14:48:29 2026
+# Process ID         : 25316
+# Current directory  : C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent11864 C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart\uart.xpr
+# Log file           : C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart/vivado.log
+# Journal file       : C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart\vivado.jou
+# Running On         : JoniDeLaMircesti
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26200
-# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13705H
-# CPU Frequency      : 2918 MHz
-# CPU Physical cores : 14
-# CPU Logical cores  : 20
-# Host memory        : 34086 MB
+# Processor Detail   : AMD Ryzen 7 7840HS with Radeon 780M Graphics   
+# CPU Frequency      : 3793 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 33492 MB
 # Swap memory        : 2147 MB
-# Total Virtual      : 36234 MB
-# Available Virtual  : 17656 MB
+# Total Virtual      : 35639 MB
+# Available Virtual  : 16086 MB
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.xpr}
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\ac701\1.4\board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+open_project C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart/uart.xpr
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
@@ -35,8 +34,6 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.2\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.3\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.4\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.6\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.7\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.4\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
@@ -50,12 +47,7 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 avai
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\scu35\1.0\board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\sp701\1.0\board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\sp701\1.1\board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.4\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.5\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc709\1.8\board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
@@ -101,8 +93,6 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.0\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.1\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.4\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.5 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.5\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu104\1.1\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
@@ -120,83 +110,614 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [Project 1-313] Project file moved from 'C:/Users/liubo/Documents/GitHub projects/SPRO4/uart' since last save.
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.gen/sources_1'.
-WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.ip_user_files'.
+INFO: [Project 1-313] Project file moved from 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart/uart.gen/sources_1'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart/uart.ip_user_files'.
 Scanning sources...
 Finished scanning sources
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\ac701\1.4\board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24i\1.0\board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.2\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.3\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.4\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
-open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1683.738 ; gain = 288.109
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:11 . Memory (MB): peak = 1715.902 ; gain = 241.375
 update_compile_order -fileset sources_1
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_project
+open_project C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation' since last save.
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/Users/usnam/AppData/Roaming/Xilinx/Vivado/2025.2/xhub/board_store/xilinx_board_store', nor could it be found using path 'C:/Users/liubo/AppData/Roaming/Xilinx/Vivado/2025.2/xhub/board_store/xilinx_board_store'.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24i\1.0\board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.2\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.3\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.4\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.4\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.5\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu1500\1.2\board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.0\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.1\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\scu35\1.0\board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.4\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.0\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.3\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.4\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu128\production\1.0\board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu1525\1.3\board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.0\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.1\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.2\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.1\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385_2\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_mpsoc\1.0\board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.0\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.1\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.2\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\2.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.0\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.1\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.2\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.0\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.1\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.0\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.1\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu104\1.1\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.4\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.5\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.6\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/AMDDesignTools/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Project 1-5713] Board part 'avnet.com:zedboard:part0:1.4' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/utils_1/imports/synth_1/osc.dcp with file C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/synth_1/osc.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Fri Apr 17 14:53:26 2026] Launched synth_1...
+Run output will be captured here: C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/synth_1/runme.log
+[Fri Apr 17 14:53:26 2026] Launched impl_1...
+Run output will be captured here: C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/impl_1/runme.log
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+create_ip -name xadc_wiz -vendor xilinx.com -library ip -version 3.3 -module_name xadc_wiz_0
+set_property -dict [list \
+  CONFIG.ENABLE_VCCDDRO_ALARM {false} \
+  CONFIG.ENABLE_VCCPAUX_ALARM {false} \
+  CONFIG.ENABLE_VCCPINT_ALARM {false} \
+  CONFIG.OT_ALARM {false} \
+  CONFIG.SENSOR_OFFSET_AND_GAIN_CALIBRATION {false} \
+  CONFIG.SINGLE_CHANNEL_SELECTION {VP_VN} \
+  CONFIG.USER_TEMP_ALARM {false} \
+  CONFIG.VCCAUX_ALARM {false} \
+  CONFIG.VCCINT_ALARM {false} \
+] [get_ips xadc_wiz_0]
+generate_target {instantiation_template} [get_files c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'xadc_wiz_0'...
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+generate_target all [get_files  c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'xadc_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xadc_wiz_0'...
+catch { config_ip_cache -export [get_ips -all xadc_wiz_0] }
+export_ip_user_files -of_objects [get_files c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci]
+launch_runs xadc_wiz_0_synth_1 -jobs 12
+[Fri Apr 17 15:36:21 2026] Launched xadc_wiz_0_synth_1...
+Run output will be captured here: C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/xadc_wiz_0_synth_1/runme.log
+INFO: [Vivado 12-4357] Exporting simulation files for 'xadc_wiz_0'... please wait for 'xadc_wiz_0_synth_1' run to finish...
+wait_on_run xadc_wiz_0_synth_1
+[Fri Apr 17 15:36:21 2026] Waiting for xadc_wiz_0_synth_1 to finish...
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+[Fri Apr 17 15:36:27 2026] Waiting for xadc_wiz_0_synth_1 to finish...
+[Fri Apr 17 15:36:32 2026] Waiting for xadc_wiz_0_synth_1 to finish...
+[Fri Apr 17 15:36:37 2026] Waiting for xadc_wiz_0_synth_1 to finish...
+[Fri Apr 17 15:36:47 2026] Waiting for xadc_wiz_0_synth_1 to finish...
+[Fri Apr 17 15:36:57 2026] Waiting for xadc_wiz_0_synth_1 to finish...
+[Fri Apr 17 15:37:07 2026] Waiting for xadc_wiz_0_synth_1 to finish...
+[Fri Apr 17 15:37:17 2026] Waiting for xadc_wiz_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log xadc_wiz_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source xadc_wiz_0.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Apr 17 15:36:24 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xadc_wiz_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 537.285 ; gain = 221.684
+Command: synth_design -top xadc_wiz_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
 Starting synth_design
-Using part: xc7z020clg484-1
-Top: uart_main
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 21588
+INFO: [Synth 8-7075] Helper process launched with PID 18184
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2429.102 ; gain = 534.754
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1324.273 ; gain = 539.648
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'uart_main' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/uart_main.vhd:48]
-	Parameter baud bound to: 115200 - type: integer 
-	Parameter clock_frequency bound to: 100000000 - type: integer 
-INFO: [Synth 8-3491] module 'loopback' declared at 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/loopback.vhd:10' bound to instance 'loopback_inst1' of component 'loopback' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/uart_main.vhd:66]
-INFO: [Synth 8-638] synthesizing module 'loopback' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/loopback.vhd:23]
-	Parameter baud bound to: 115200 - type: integer 
-	Parameter clock_frequency bound to: 100000000 - type: integer 
-	Parameter baud bound to: 115200 - type: integer 
-	Parameter clock_frequency bound to: 100000000 - type: integer 
-INFO: [Synth 8-3491] module 'uart' declared at 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/uart.vhd:32' bound to instance 'uart_inst' of component 'uart' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/loopback.vhd:84]
-INFO: [Synth 8-638] synthesizing module 'uart' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/uart.vhd:50]
-	Parameter baud bound to: 115200 - type: integer 
-	Parameter clock_frequency bound to: 100000000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'uart' (0#1) [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/uart.vhd:50]
-	Parameter fifo_width bound to: 8 - type: integer 
-	Parameter fifo_depth bound to: 1024 - type: integer 
-INFO: [Synth 8-3491] module 'GENERIC_FIFO' declared at 'C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/generic_fifo.vhd:6' bound to instance 'receive_buffer' of component 'generic_fifo' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/loopback.vhd:104]
-INFO: [Synth 8-638] synthesizing module 'GENERIC_FIFO' [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/generic_fifo.vhd:26]
-	Parameter FIFO_WIDTH bound to: 8 - type: integer 
-	Parameter FIFO_DEPTH bound to: 1024 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'GENERIC_FIFO' (0#1) [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/generic_fifo.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'loopback' (0#1) [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/loopback.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'uart_main' (0#1) [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/sources_1/new/uart_main.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'xadc_wiz_0' [c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd:76]
+	Parameter INIT_40 bound to: 16'b0000000000000011 
+	Parameter INIT_41 bound to: 16'b0011000100101111 
+	Parameter INIT_42 bound to: 16'b0000010000000000 
+	Parameter INIT_48 bound to: 16'b0000000100000000 
+	Parameter INIT_49 bound to: 16'b0000000000000000 
+	Parameter INIT_4A bound to: 16'b0000000000000000 
+	Parameter INIT_4B bound to: 16'b0000000000000000 
+	Parameter INIT_4C bound to: 16'b0000000000000000 
+	Parameter INIT_4D bound to: 16'b0000000000000000 
+	Parameter INIT_4E bound to: 16'b0000000000000000 
+	Parameter INIT_4F bound to: 16'b0000000000000000 
+	Parameter INIT_50 bound to: 16'b1011010111101101 
+	Parameter INIT_51 bound to: 16'b0101011111100100 
+	Parameter INIT_52 bound to: 16'b1010000101000111 
+	Parameter INIT_53 bound to: 16'b1100101000110011 
+	Parameter INIT_54 bound to: 16'b1010100100111010 
+	Parameter INIT_55 bound to: 16'b0101001011000110 
+	Parameter INIT_56 bound to: 16'b1001010101010101 
+	Parameter INIT_57 bound to: 16'b1010111001001110 
+	Parameter INIT_58 bound to: 16'b0101100110011001 
+	Parameter INIT_59 bound to: 16'b0101010101010101 
+	Parameter INIT_5A bound to: 16'b1001100110011001 
+	Parameter INIT_5B bound to: 16'b0110101010101010 
+	Parameter INIT_5C bound to: 16'b0101000100010001 
+	Parameter INIT_5D bound to: 16'b0101000100010001 
+	Parameter INIT_5E bound to: 16'b1001000111101011 
+	Parameter INIT_5F bound to: 16'b0110011001100110 
+	Parameter SIM_DEVICE bound to: ZYNQ - type: string 
+	Parameter SIM_MONITOR_FILE bound to: design.txt - type: string 
+INFO: [Synth 8-113] binding component instance 'U0' to cell 'XADC' [c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'xadc_wiz_0' (0#1) [c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd:76]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2549.957 ; gain = 655.609
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1442.453 ; gain = 657.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2549.957 ; gain = 655.609
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1442.453 ; gain = 657.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2549.957 ; gain = 655.609
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1442.453 ; gain = 657.828
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2549.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1442.453 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/constrs_1/new/uart_constraints.xdc]
-Finished Parsing XDC File [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart/uart.srcs/constrs_1/new/uart_constraints.xdc]
+Parsing XDC File [c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/xadc_wiz_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/xadc_wiz_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2614.395 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1442.453 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 2907.770 ; gain = 1013.422
-17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1442.453 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1442.453 ; gain = 657.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1442.453 ; gain = 657.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1442.453 ; gain = 657.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1442.453 ; gain = 657.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1451.562 ; gain = 666.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1619.152 ; gain = 834.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1619.152 ; gain = 834.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1628.688 ; gain = 844.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1878.516 ; gain = 1093.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1878.516 ; gain = 1093.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1878.516 ; gain = 1093.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1878.516 ; gain = 1093.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1878.516 ; gain = 1093.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1878.516 ; gain = 1093.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |XADC |     1|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1878.516 ; gain = 1093.891
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 1878.516 ; gain = 1093.891
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1878.516 ; gain = 1093.891
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1878.516 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1881.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 7e092f93
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 2907.770 ; gain = 1218.164
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1881.629 ; gain = 1329.820
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1881.629 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP xadc_wiz_0, cache-ID = 271f880b1f3f57be
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1881.629 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/xadc_wiz_0_synth_1/xadc_wiz_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file xadc_wiz_0_utilization_synth.rpt -pb xadc_wiz_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 17 15:37:25 2026...
+[Fri Apr 17 15:37:27 2026] xadc_wiz_0_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:01:06 . Memory (MB): peak = 1979.730 ; gain = 0.000
+ERROR: [Common 17-39] 'wait_on_runs' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\wave_generator.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_rx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\osc.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\usnam\Documents\GitHub\SPRO4\Firmware\uart_generation\uart_generation.srcs\sources_1\new\uart_tx.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 14 11:11:31 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 17 15:42:09 2026...

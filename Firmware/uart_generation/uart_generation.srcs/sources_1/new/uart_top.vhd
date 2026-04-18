@@ -14,7 +14,7 @@ entity uart_top is
         i_clk       : in  std_logic;
         i_rst       : in  std_logic;
         -- ADC side (transmit)
-        i_adc_data  : in  std_logic_vector(7 downto 0);
+        i_tx_data   : in  std_logic_vector(7 downto 0);
         i_adc_valid : in  std_logic;
         o_tx_busy   : out std_logic;
         o_tx        : out std_logic;
@@ -65,7 +65,7 @@ begin
         port map (
             i_clk   => i_clk,
             i_rst   => i_rst,
-            i_data  => i_adc_data,
+            i_data  => i_tx_data,
             i_valid => i_adc_valid,
             o_busy  => o_tx_busy,
             o_tx    => o_tx

@@ -80,7 +80,7 @@ begin
             dclk_in     => clk,
             reset_in    => '0',
             di_in       => (others => '0'),
-            daddr_in    => "0000000", -- Address 0x00: Internal Temperature
+            daddr_in    => "0000011", -- Address 0x00: Internal Temperature
             den_in      => eoc,       -- Auto-trigger
             dwe_in      => '0',
             drdy_out    => drdy,

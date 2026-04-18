@@ -3,22 +3,22 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Fri Apr 17 14:40:50 2026
-# Process ID         : 6860
-# Current directory  : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.runs/synth_1
+# Start of session at: Sat Apr 18 20:28:00 2026
+# Process ID         : 6240
+# Current directory  : C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/synth_1
 # Command line       : vivado.exe -log osc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source osc.tcl
-# Log file           : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.runs/synth_1/osc.vds
-# Journal file       : C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.runs/synth_1\vivado.jou
-# Running On         : DESKTOP-QU8QVCL
+# Log file           : C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/synth_1/osc.vds
+# Journal file       : C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.runs/synth_1\vivado.jou
+# Running On         : JoniDeLaMircesti
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26200
-# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13705H
-# CPU Frequency      : 2918 MHz
-# CPU Physical cores : 14
-# CPU Logical cores  : 20
-# Host memory        : 34086 MB
+# Processor Detail   : AMD Ryzen 7 7840HS with Radeon 780M Graphics   
+# CPU Frequency      : 3793 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 33492 MB
 # Swap memory        : 2147 MB
-# Total Virtual      : 36234 MB
-# Available Virtual  : 15385 MB
+# Total Virtual      : 35639 MB
+# Available Virtual  : 17652 MB
 #-----------------------------------------------------------
 source osc.tcl -notrace

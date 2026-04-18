@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-// Date        : Thu Apr 16 16:57:57 2026
+// Date        : Fri Apr 17 13:41:10 2026
 // Host        : JoniDeLaMircesti running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v
+//               c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0_stub.v
 // Design      : xadc_wiz_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

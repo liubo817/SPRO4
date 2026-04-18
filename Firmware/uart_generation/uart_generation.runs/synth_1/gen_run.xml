@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1776429647" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/osc.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1776536878" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/osc.dcp">
   <File Type="PA-TCL" Name="osc.tcl"/>
   <File Type="REPORTS-TCL" Name="osc_reports.tcl"/>
   <File Type="RDS-RDS" Name="osc.vds"/>
@@ -11,6 +11,12 @@
   <File Type="VDS-TIMING-PB" Name="osc_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/osc.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/uart_rx.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -30,12 +36,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/wave_generator.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/osc.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -73,9 +73,8 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="xadc_wiz_0"/>
 </GenRun>

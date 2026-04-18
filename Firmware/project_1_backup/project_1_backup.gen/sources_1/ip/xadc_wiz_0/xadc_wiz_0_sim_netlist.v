@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-// Date        : Thu Apr 16 16:57:57 2026
+// Date        : Fri Apr 17 13:41:10 2026
 // Host        : JoniDeLaMircesti running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0_sim_netlist.v
+//               c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0_sim_netlist.v
 // Design      : xadc_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -70,7 +70,7 @@ module xadc_wiz_0
 
   (* box_type = "PRIMITIVE" *) 
   XADC #(
-    .INIT_40(16'h3000),
+    .INIT_40(16'h3003),
     .INIT_41(16'h312F),
     .INIT_42(16'h0400),
     .INIT_43(16'h0000),

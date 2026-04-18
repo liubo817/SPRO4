@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.runs/impl_1/osc.tcl"
+  variable script "C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.runs/impl_1/osc.tcl"
   variable category "vivado_impl"
 }
 
@@ -106,6 +106,7 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param general.usePosixSpawnForFork 1
   set_param chipscope.maxJobs 4
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1
@@ -114,16 +115,16 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.cache/wt [current_project]
-  set_property parent.project_path C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.xpr [current_project]
-  set_property ip_output_repo C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.cache/wt [current_project]
+  set_property parent.project_path C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.xpr [current_project]
+  set_property ip_output_repo C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.runs/synth_1/osc.dcp
-  read_ip -quiet C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci
+  add_files -quiet C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.runs/synth_1/osc.dcp
+  read_ip -quiet C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/constrs_1/new/osc.xdc
+  read_xdc C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/constrs_1/new/osc.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

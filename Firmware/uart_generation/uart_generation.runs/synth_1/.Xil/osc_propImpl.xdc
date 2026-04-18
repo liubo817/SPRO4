@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new/osc.xdc} rfile:../../../uart_generation.srcs/constrs_1/new/osc.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/constrs_1/new/osc.xdc rfile:../../../uart_generation.srcs/constrs_1/new/osc.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y9 [get_ports {clk}]
 set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]

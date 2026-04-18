@@ -1,1 +1,1 @@
-xadc_wiz_0.vhd,vhdl,xil_defaultlib,../../../../Oscilloscope.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd,incdir="../../../../../../../../../../../../2025.2/Vivado/data/rsb/busdef"
+xadc_wiz_0.vhd,vhdl,xil_defaultlib,../../../../project_1_backup.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.vhd,incdir="../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"

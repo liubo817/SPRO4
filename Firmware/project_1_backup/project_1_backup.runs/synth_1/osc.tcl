@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.runs/synth_1/osc.tcl"
+  variable script "C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.runs/synth_1/osc.tcl"
   variable category "vivado_synth"
 }
 
@@ -57,6 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -64,19 +65,19 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.cache/wt [current_project]
-set_property parent.project_path C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.cache/wt [current_project]
+set_property parent.project_path C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part xilinx.com:zc702:part0:1.4 [current_project]
-set_property ip_output_repo c:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.cache/ip [current_project]
+set_property ip_output_repo c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/sources_1/new/osc.vhd
-read_ip -quiet C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc]
+read_vhdl -library xil_defaultlib C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/sources_1/new/osc.vhd
+read_ip -quiet C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -87,12 +88,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/constrs_1/new/osc.xdc
-set_property used_in_implementation false [get_files C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/constrs_1/new/osc.xdc]
+read_xdc C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/constrs_1/new/osc.xdc
+set_property used_in_implementation false [get_files C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/constrs_1/new/osc.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/usnam/Documents/adc/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/utils_1/imports/synth_1/osc.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/project_1_backup/project_1_backup.srcs/utils_1/imports/synth_1/osc.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

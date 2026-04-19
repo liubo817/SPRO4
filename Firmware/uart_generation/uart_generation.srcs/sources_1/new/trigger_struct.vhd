@@ -38,18 +38,18 @@ port (
 
     -- trigger settings
     i_trig_level  : in std_logic_vector(15 downto 0);
-    i_trip_type   : in std_logic;
+    i_trig_type   : in std_logic;
     arm_trigger   : in std_logic;
 
     -- trigger outputs
     o_buffer      : out std_logic_vector(7 downto 0);
-    trig_good     : out std_logic;
+    o_trig_good   : out std_logic;
     i_read_req    : in  std_logic;
 
     -- adc stuff
     i_adc_data    : in std_logic_vector(15 downto 0);
     i_adc_valid   : in std_logic;
-    decimation_factor : in std_logic_vector(7 downto 0)
+    i_dec_factor  : in std_logic_vector(7 downto 0)
 
 );
 end trigger_struct;
@@ -78,7 +78,7 @@ begin
         d_reset => t_reset,
         i_adc_valid => i_adc_valid,
         i_adc_in => i_adc_data,
-        i_dec_factor => decimation_factor,
+        i_dec_factor => i_dec_factor,
         o_dec_output => o_dec_output
     );
 

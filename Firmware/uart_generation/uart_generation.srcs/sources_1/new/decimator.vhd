@@ -49,8 +49,8 @@ end decimator;
 
 architecture Behavioral of decimator is
 
-    signal accu_register : unsigned(15 downto 0) := (others => '0');
-    signal counter : unsigned(7 downto 0) := (others => '0');
+    signal accu_register   : unsigned(15 downto 0) := (others => '0');
+    signal counter         : unsigned(7 downto 0) := (others => '0');
     signal decimated_valid : std_logic;
 
 

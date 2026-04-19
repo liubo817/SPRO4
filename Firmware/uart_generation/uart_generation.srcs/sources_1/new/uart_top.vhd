@@ -4,6 +4,7 @@
 -- =============================================================================
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity uart_top is
     generic (
@@ -22,7 +23,13 @@ entity uart_top is
         i_rx        : in  std_logic;
         -- Wave generator control outputs
         o_duty      : out std_logic_vector(7 downto 0);
-        o_wave_sel  : out std_logic
+        o_wave_sel  : out std_logic;
+        o_trig_type : out std_logic;
+        o_trig_level : out std_logic_vector(15 downto 0);
+        o_dec_factor : out std_logic_vector(7 downto 0);
+        o_arm_trig : out std_logic;
+        i_trig_good : in std_logic;
+        o_read_req : out std_logic
     );
 end entity;
 
@@ -55,7 +62,7 @@ architecture Structural of uart_top is
     signal rx_valid : std_logic;
 
     -- Tracks whether next byte is duty or wave_sel
-    signal rx_byte_idx : std_logic := '0';  -- 0=duty, 1=wave_sel
+    signal rx_byte_idx : unsigned(7 downto 0) := (others => '0');
 
 begin
 
@@ -91,13 +98,18 @@ begin
                 o_wave_sel  <= '0';    -- default PWM mode
                 rx_byte_idx <= '0';
             elsif rx_valid = '1' then
-                if rx_byte_idx = '0' then
-                    o_duty      <= rx_data;
-                    rx_byte_idx <= '1';
-                else
-                    o_wave_sel  <= rx_data(0);  -- LSB = wave_sel
-                    rx_byte_idx <= '0';
-                end if;
+                case rx_byte_idx is
+                    when rx_byte_idx = "0000" =>
+                        o_duty      <= rx_data;
+                        -- rx_byte_idx <= '1';
+                    when rx_byte_idx = "0001" =>
+                        o_wave_sel  <= rx_data(0);  -- LSB = wave_sel
+                        -- rx_byte_idx <= '0';
+                    when rx_byte_idx = "0010" =>
+                        o_wave_sel  <= rx_data(0);
+
+
+                end case;
             end if;
         end if;
     end process;

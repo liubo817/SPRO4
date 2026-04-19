@@ -41,7 +41,13 @@ architecture Structural of osc is
             o_tx        : out std_logic;
             i_rx        : in  std_logic;
             o_duty      : out std_logic_vector(7 downto 0);
-            o_wave_sel  : out std_logic
+            o_wave_sel  : out std_logic;
+            o_trig_type : out std_logic;
+            o_trig_level : out std_logic_vector(15 downto 0);
+            o_dec_factor : out std_logic_vector(7 downto 0);
+            o_arm_trig : out std_logic;
+            i_trig_good : in std_logic;
+            o_read_req : out std_logic
         );
     end component;
 
@@ -50,6 +56,12 @@ architecture Structural of osc is
     signal xadc_data    : std_logic_vector(15 downto 0); -- We only strictly need what we use, but let's keep your mapping
     signal xadc_out     : std_logic_vector(15 downto 0);
     signal i_tx_data    : std_logic_vector(7 downto 0);
+    signal trig_level   : std_logic_vector(15 downto 0);
+    signal trig_type    : std_logic;
+    signal trig_good    : std_logic;
+    signal read_req     : std_logic;
+    signal dec_factor   : std_logic_vector(7 downto 0);
+    signal arm_trigger  : std_logic;
     
     component xadc_wiz_0
         port (
@@ -83,6 +95,23 @@ architecture Structural of osc is
         );
     end component;
 
+    component trigger_struct is
+        port (
+            t_clk         : in  std_logic;
+            t_reset       : in  std_logic;
+            i_trig_level  : in std_logic_vector(15 downto 0);
+            i_trig_type   : in std_logic;
+            arm_trigger   : in std_logic;
+            o_buffer      : out std_logic_vector(7 downto 0);
+            o_trig_good   : out std_logic;
+            i_read_req    : in  std_logic;
+            i_adc_data    : in std_logic_vector(15 downto 0);
+            i_adc_valid   : in std_logic;
+            i_dec_factor  : in std_logic_vector(7 downto 0)
+        );
+
+    end component;
+
     -- Internal wires between uart_top and wave_generator
     signal duty_sig     : std_logic_vector(7 downto 0);
     signal wave_sel_sig : std_logic;
@@ -102,7 +131,13 @@ begin
             o_tx        => o_tx,
             i_rx        => i_rx,
             o_duty      => duty_sig,
-            o_wave_sel  => wave_sel_sig
+            o_wave_sel  => wave_sel_sig,
+            o_trig_type => trig_type,
+            o_trig_level => trig_level,
+            o_dec_factor => dec_factor,
+            o_arm_trig => arm_trigger,
+            i_trig_good => trig_good,
+            o_read_req => read_req
         );
         
     xadc_inst : xadc_wiz_0
@@ -122,6 +157,21 @@ begin
             alarm_out   => open,
             eos_out     => open,
             busy_out    => open
+        );
+
+    u_trigger : trigger_struct
+        port map (
+            t_clk   => clk,
+            t_reset => reset,
+            i_trig_level => trig_level,
+            i_trig_type => trig_type,
+            o_buffer => i_tx_data,
+            o_trig_good => trig_good,
+            i_read_req  => read_req,
+            i_adc_data  => xadc_data,
+            i_adc_valid => drdy,
+            i_dec_factor => dec_factor,
+            arm_trigger => arm_trigger
         );
 
     u_wave : wave_generator

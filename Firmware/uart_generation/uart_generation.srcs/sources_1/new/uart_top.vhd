@@ -12,24 +12,25 @@ entity uart_top is
         G_BAUD   : integer := 115_200
     );
     port (
-        i_clk       : in  std_logic;
-        i_rst       : in  std_logic;
-        -- ADC side (transmit)
-        i_tx_data   : in  std_logic_vector(7 downto 0);
-        i_adc_valid : in  std_logic;
-        o_tx_busy   : out std_logic;
-        o_tx        : out std_logic;
+        i_clk        : in  std_logic;
+        i_rst        : in  std_logic;
+        -- ADC side (transit)
+        i_tx_data    : in  std_logic_vector(7 downto 0);
+        i_adc_valid  : in  std_logic;
+        o_tx_busy    : out std_logic;
+        o_tx         : out std_logic;
         -- FTDI receive
-        i_rx        : in  std_logic;
-        -- Wave generator control outputs
-        o_duty      : out std_logic_vector(7 downto 0);
-        o_wave_sel  : out std_logic;
-        o_trig_type : out std_logic;
+        i_rx         : in  std_logic;
+        -- Wave generator control stuff
+        o_duty       : out std_logic_vector(7 downto 0);
+        o_wave_sel   : out std_logic;
+        -- Trigger signals
+        o_trig_type  : out std_logic;
         o_trig_level : out std_logic_vector(15 downto 0);
         o_dec_factor : out std_logic_vector(7 downto 0);
-        o_arm_trig : out std_logic;
-        i_trig_good : in std_logic;
-        o_read_req : out std_logic
+        o_arm_trig   : out std_logic;
+        i_trig_good  : in  std_logic;
+        o_read_req   : out std_logic
     );
 end entity;
 
@@ -89,7 +90,7 @@ begin
             o_valid => rx_valid
         );
 
-    -- Command decoder: byte 0 = duty, byte 1 = wave_sel
+    -- Command decoder
     process(i_clk)
     begin
         if rising_edge(i_clk) then
@@ -99,14 +100,16 @@ begin
                 rx_byte_idx <= '0';
             elsif rx_valid = '1' then
                 case rx_byte_idx is
-                    when rx_byte_idx = "0000" =>
+                    when rx_byte_idx = x"01" => -- set duty cycle for wavegen
                         o_duty      <= rx_data;
                         -- rx_byte_idx <= '1';
-                    when rx_byte_idx = "0001" =>
+                    when rx_byte_idx = x"02" =>
                         o_wave_sel  <= rx_data(0);  -- LSB = wave_sel
                         -- rx_byte_idx <= '0';
-                    when rx_byte_idx = "0010" =>
-                        o_wave_sel  <= rx_data(0);
+                    when rx_byte_idx = x"03" =>
+                        o_trig_type <= rx_data(0); -- trigger type, LSB
+                    when rx_byte_idx = x"04" =>
+                        o_trig_level[0] <= rx_data & rx_data;
 
 
                 end case;

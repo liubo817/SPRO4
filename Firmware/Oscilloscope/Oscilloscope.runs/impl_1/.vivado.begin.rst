@@ -8,3 +8,18 @@
     <Process Command="vivado.bat" Owner="vikip" Host="VIKTORIO" Pid="3088" HostCore="8" HostMemory="016824852480">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="vikip" Host="VIKTORIO" Pid="32584" HostCore="8" HostMemory="016824852480">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="vikip" Host="VIKTORIO" Pid="7444" HostCore="8" HostMemory="016824852480">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="vikip" Host="VIKTORIO" Pid="29236" HostCore="8" HostMemory="016824852480">
+    </Process>
+</ProcessHandle>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1777043401" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/osc.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1777047508" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/osc.dcp">
   <File Type="PA-TCL" Name="wave_generator.tcl"/>
   <File Type="REPORTS-TCL" Name="wave_generator_reports.tcl"/>
   <File Type="RDS-RDS" Name="wave_generator.vds"/>

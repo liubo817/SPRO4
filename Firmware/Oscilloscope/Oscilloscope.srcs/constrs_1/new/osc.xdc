@@ -58,13 +58,6 @@ set_property PACKAGE_PIN F21      [get_ports {freq_sel[3]}]
 set_property IOSTANDARD  LVCMOS18 [get_ports {freq_sel[*]}]
 
 ## -----------------------------------------------------------------------------
-## Wave select  -  SW4  (Bank 35, LVCMOS18)
-##   0 = PWM output active   |   1 = Sawtooth output active
-## -----------------------------------------------------------------------------
-set_property PACKAGE_PIN H19      [get_ports wave_sel]
-set_property IOSTANDARD  LVCMOS18 [get_ports wave_sel]
-
-## -----------------------------------------------------------------------------
 ## PWM duty cycle  -  JB PMOD  pins 1-4, 7-10  (Bank 13, LVCMOS33)
 ##
 ##   For a quick smoke-test without external hardware:
@@ -74,10 +67,11 @@ set_property IOSTANDARD  LVCMOS18 [get_ports wave_sel]
 ##
 ##   JB1=duty[0](LSB) … JB4=duty[3],  JB7=duty[4] … JB10=duty[7](MSB)
 ## -----------------------------------------------------------------------------
-## duty[2:0]  -  SW5=duty[0](LSB)  SW6=duty[1]  SW7=duty[2](MSB)  (LVCMOS18)
-set_property PACKAGE_PIN H18      [get_ports {duty[0]}]
-set_property PACKAGE_PIN H17      [get_ports {duty[1]}]
-set_property PACKAGE_PIN M15      [get_ports {duty[2]}]
+## duty[3:0]  -  SW4=duty[0](LSB)  SW5=duty[1]  SW6=duty[2]   SW7=duty[3](MSB)  (LVCMOS18)
+set_property PACKAGE_PIN H19      [get_ports {duty[0]}]
+set_property PACKAGE_PIN H18      [get_ports {duty[1]}]
+set_property PACKAGE_PIN H17      [get_ports {duty[2]}]
+set_property PACKAGE_PIN M15      [get_ports {duty[3]}]
 set_property IOSTANDARD  LVCMOS18 [get_ports {duty[*]}]
 
 ## -----------------------------------------------------------------------------
@@ -88,28 +82,12 @@ set_property PACKAGE_PIN AA11      [get_ports pwm_out]
 set_property IOSTANDARD  LVCMOS33 [get_ports pwm_out]
 
 ## -----------------------------------------------------------------------------
-## Sawtooth output  -  On-board LEDs LD0-LD7  (Bank 33/34, LVCMOS33)
-##   MSB on LD7 (leftmost), LSB on LD0 (rightmost).
-##   At 100 Hz the ramp is visible as a chasing pattern.
-## -----------------------------------------------------------------------------
-set_property PACKAGE_PIN T22      [get_ports {saw_out[0]}]
-set_property PACKAGE_PIN T21      [get_ports {saw_out[1]}]
-set_property PACKAGE_PIN U22      [get_ports {saw_out[2]}]
-set_property PACKAGE_PIN U21      [get_ports {saw_out[3]}]
-set_property PACKAGE_PIN V22      [get_ports {saw_out[4]}]
-set_property PACKAGE_PIN W22      [get_ports {saw_out[5]}]
-set_property PACKAGE_PIN U19      [get_ports {saw_out[6]}]
-set_property PACKAGE_PIN U14      [get_ports {saw_out[7]}]
-set_property IOSTANDARD  LVCMOS33 [get_ports {saw_out[*]}]
-
-## -----------------------------------------------------------------------------
 ## Timing exceptions
 ##   Switches and buttons are async to the clock. The 2-FF synchroniser in
 ##   the RTL handles metastability; tell the timing engine not to analyse
 ##   these crossing paths.
 ## -----------------------------------------------------------------------------
 set_false_path -from [get_ports {freq_sel[*]}]
-set_false_path -from [get_ports wave_sel]
 set_false_path -from [get_ports {duty[*]}]
 set_false_path -from [get_ports reset]
 

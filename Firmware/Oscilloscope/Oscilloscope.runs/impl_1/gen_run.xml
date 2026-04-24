@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1777043401">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1777047508">
   <File Type="PA-TCL" Name="wave_generator.tcl"/>
   <File Type="REPORTS-TCL" Name="wave_generator_reports.tcl"/>
   <File Type="INIT-TIMING" Name="wave_generator_timing_summary_init.rpt"/>

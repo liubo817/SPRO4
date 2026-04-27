@@ -1,0 +1,95 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\Users\usnam\Documents\GitHub\SPRO4\Hardware\precond\opamp2.net
+Start Time: Mon Apr 27 14:34:32 2026
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+Gmin = 0.000223007
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+Gmin = 0.000212923
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+Gmin = 0.000211886
+vernier = 0.00520833
+vernier = 0.00694444
+Gmin = 0.000209102
+vernier = 0.00925925
+Gmin = 0.000204795
+vernier = 0.0123457
+vernier = 0.0164609
+Gmin = 0.000197768
+vernier = 0.0219478
+vernier = 0.0292638
+Gmin = 0.000187067
+vernier = 0.0390184
+Gmin = 0.000171412
+vernier = 0.0520245
+vernier = 0.0693659
+Gmin = 0.000148081
+vernier = 0.0924879
+vernier = 0.123317
+Gmin = 0.000117389
+vernier = 0.164423
+Gmin = 8.16419e-05
+vernier = 0.21923
+vernier = 0.292307
+Gmin = 4.47044e-05
+vernier = 0.389743
+vernier = 0.519657
+Gmin = 1.7407e-05
+vernier = 0.692876
+Gmin = 4.09513e-06
+vernier = 0.923834
+vernier = 1
+Gmin = 4.82133e-07
+Gmin = 5.17686e-08
+Gmin = 5.55861e-09
+vernier = 0.5
+vernier = 0.666667
+vernier = 0.333333
+Gmin = 3.05074e-09
+vernier = 0.166667
+vernier = 0.0833333
+vernier = 0.0416667
+vernier = 0.0208333
+Gmin = 3.15501e-09
+vernier = 0.0104167
+vernier = 0.0138889
+Gmin = 3.07671e-09
+vernier = 0.00694444
+vernier = 0.00347222
+vernier = 0.00462963
+Gmin = 3.05985e-09
+vernier = 0.00617283
+vernier = 0.00308642
+vernier = 0.00154321
+Gmin = 3.03986e-09
+vernier = 0.000771604
+Gmin = 3.03342e-09
+vernier = 0.00102881
+vernier = 0.000514403
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 1.279 seconds.
+
+Files loaded:
+C:\Users\usnam\Documents\GitHub\SPRO4\Hardware\precond\opamp2.net
+C:\Users\usnam\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\usnam\Downloads\sbom067d\OPAx340.LIB
+C:\Users\usnam\AppData\Local\LTspice\lib\sub\UniversalOpAmp1.lib
+

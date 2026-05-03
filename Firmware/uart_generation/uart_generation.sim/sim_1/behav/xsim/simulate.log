@@ -1,1 +1,4 @@
 Time resolution is 1 ps
+Failure: Simulation Finished
+Time: 300 ns  Iteration: 0  Process: /tb_decimator/line__81  File: C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sim_1/new/tb_decimator.vhd
+$finish called at time : 300 ns : File "C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sim_1/new/tb_decimator.vhd" Line 106

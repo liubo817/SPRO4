@@ -55,19 +55,23 @@ architecture Behavioral of decimator is
 
 
 begin
-    process(clk)
+    process(d_clk)
     begin
         if rising_edge(d_clk) then
             if d_reset = '1' then
                 counter <= (others => '0');
                 decimated_valid <= '0';
+                accu_register <= (others => '0');
+                o_dec_output <= (others => '0');
             else 
                 decimated_valid <= '0';
                 if i_adc_valid = '1' then
-                    if counter >= unsigned(i_dec_factor) - 1 then
-                        o_dec_output <= shift_right(std_logic_vector(accu_register), i_dec_factor);
+                    if counter >= (shift_left(to_unsigned(1, counter'length), to_integer(unsigned(i_dec_factor))) - 1) then
+                        accu_register <= accu_register + unsigned(i_adc_in);
+                        o_dec_output <= std_logic_vector(shift_right(accu_register, to_integer(unsigned(i_dec_factor))));
                         decimated_valid <= '1';
                         counter <= (others => '0');
+                        accu_register <= (others => '0');
                     else
                         accu_register <= accu_register + unsigned(i_adc_in);
                         counter <= counter + 1;

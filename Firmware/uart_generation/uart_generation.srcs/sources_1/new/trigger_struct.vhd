@@ -1,21 +1,5 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 04/18/2026 08:36:30 PM
--- Design Name: 
--- Module Name: trigger_struct - Structural
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- shit
 ----------------------------------------------------------------------------------
 
 
@@ -57,6 +41,9 @@ end trigger_struct;
 architecture Structural of trigger_struct is
 
     signal o_dec_output : std_logic_vector(15 downto 0);
+    signal dec_reg      : std_logic_vector(15 downto 0);
+    signal byte_sel     : std_logic := '0';
+    signal data_valid   : std_logic := '0';
 
     component decimator is
         port (
@@ -81,5 +68,30 @@ begin
         i_dec_factor => i_dec_factor,
         o_dec_output => o_dec_output
     );
+    
+    process(t_clk)
+    begin
+        if rising_edge(t_clk) then
+            if t_reset = '1' then
+                byte_sel <= '0';
+                data_valid <= '0';
+            else
+                if i_adc_valid = '1' then
+                    dec_reg <= o_dec_output;
+                    byte_sel <= '0';
+                    data_valid <= '1';
+                elsif i_read_req = '1' and data_valid = '1' then
+                    if byte_sel = '0' then
+                        byte_sel <= '1';
+                    else
+                        data_valid <= '0';
+                    end if;
+                end if;
+            end if;
+        end if;
+    end process;
+
+    o_buffer <= dec_reg(15 downto 8) when byte_sel = '0' else dec_reg(7 downto 0);
+    o_trig_good <= data_valid;
 
 end Structural;

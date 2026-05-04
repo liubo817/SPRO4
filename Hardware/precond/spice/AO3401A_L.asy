@@ -3,9 +3,9 @@ SymbolType BLOCK
 RECTANGLE Normal -32 -40 32 40
 WINDOW 0 0 -40 Bottom 2
 WINDOW 3 0 40 Top 2
-SYMATTR Value AO3401A
 SYMATTR Prefix X
-SYMATTR ModelFile C:\Users\bobos\Documents\GitHub\SPRO4\Hardware\precond\spice\AO3401A.mod
+SYMATTR Value AO3401A
+SYMATTR ModelFile C:\Users\usnam\Documents\GitHub\SPRO4\Hardware\precond\spice\AO3401A.mod
 PIN -32 0 LEFT 8
 PINATTR PinName D
 PINATTR SpiceOrder 1

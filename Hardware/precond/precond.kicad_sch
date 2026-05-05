@@ -8470,8 +8470,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k"
-			(at 142.748 129.286 0)
+		(property "Value" "100"
+			(at 142.24 129.286 0)
 			(effects
 				(font
 					(size 1.27 1.27)

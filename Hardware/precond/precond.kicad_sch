@@ -3487,7 +3487,7 @@
 		)
 		(uuid "ab4a257a-a09a-4105-bf14-1214ed222ecd")
 	)
-	(text_box "AMS connector\n"
+	(text_box "XADC HEADDER\n"
 		(exclude_from_sim no)
 		(at 203.2 25.4 0)
 		(size 63.5 40.64)
@@ -7982,7 +7982,7 @@
 				)
 			)
 		)
-		(property "Value" "AMS_Conn"
+		(property "Value" "XADC_headder"
 			(at 234.95 30.48 0)
 			(effects
 				(font
@@ -7990,7 +7990,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinSocket_2.00mm:PinSocket_2x10_P2.00mm_Vertical"
 			(at 233.68 44.45 0)
 			(effects
 				(font

@@ -8,8 +8,8 @@ create_clock -period 10.000 -name sys_clk [get_ports {clk}]
 # ----------------------------------------------------------------------------
 # UART TX - PMOD JA pin 1 - Bank 13 (3.3V fixed)
 # ----------------------------------------------------------------------------
-set_property PACKAGE_PIN Y11 [get_ports {uart_txd}]
-set_property IOSTANDARD LVCMOS33 [get_ports {uart_txd}]
+#set_property PACKAGE_PIN Y11 [get_ports {uart_txd}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {uart_txd}]
 
 # ----------------------------------------------------------------------------
 # Bank 13 IO standard (covers both pins above)
@@ -78,7 +78,7 @@ set_property IOSTANDARD  LVCMOS18 [get_ports {duty[*]}]
 ## PWM output  -  JA PMOD pin 1  (Bank 13, LVCMOS33)
 ##   Scope probe point - connect oscilloscope channel 1 here.
 ## -----------------------------------------------------------------------------
-set_property PACKAGE_PIN AA11      [get_ports pwm_out]
+set_property PACKAGE_PIN K15      [get_ports pwm_out]
 set_property IOSTANDARD  LVCMOS33 [get_ports pwm_out]
 
 ## -----------------------------------------------------------------------------

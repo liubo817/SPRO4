@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Firmware/Oscilloscope/Oscilloscope.runs/impl_1/wave_generator.tcl"
+  variable script "C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Oscilloscope/Oscilloscope.runs/impl_1/wave_generator.tcl"
   variable category "vivado_impl"
 }
 
@@ -105,9 +105,8 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param general.usePosixSpawnForFork 1
-  set_param chipscope.maxJobs 2
-  set_param xicom.use_bs_reader 1
-  set_param runs.launchOptions { -jobs 8  }
+  set_param chipscope.maxJobs 5
+  set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part xilinx.com:zc702:part0:1.4 [current_project]
@@ -115,15 +114,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir {C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Firmware/Oscilloscope/Oscilloscope.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Firmware/Oscilloscope/Oscilloscope.xpr} [current_project]
-  set_property ip_output_repo {{C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Firmware/Oscilloscope/Oscilloscope.cache/ip}} [current_project]
+  set_property webtalk.parent_dir {C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Oscilloscope/Oscilloscope.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Oscilloscope/Oscilloscope.xpr} [current_project]
+  set_property ip_output_repo {{C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Oscilloscope/Oscilloscope.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet {{C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Firmware/Oscilloscope/Oscilloscope.runs/synth_1/wave_generator.dcp}}
+  add_files -quiet {{C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Oscilloscope/Oscilloscope.runs/synth_1/wave_generator.dcp}}
 OPTRACE "read constraints: implementation" START { }
-  read_xdc {{C:/Users/vikip/Desktop/GitHub Repos/SPRO4/Firmware/Oscilloscope/Oscilloscope.srcs/constrs_1/new/osc.xdc}}
+  read_xdc {{C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Oscilloscope/Oscilloscope.srcs/constrs_1/new/osc.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

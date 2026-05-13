@@ -8552,7 +8552,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05503HBLC_1x03_P5.00mm_Horizontal"
+		(property "Footprint" "TerminalBlock_MetzConnect_Type011_RT05503HBLC_1x03_P5.00mm_Horizontal"
 			(at 209.55 123.19 0)
 			(effects
 				(font

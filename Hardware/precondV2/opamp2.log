@@ -1,0 +1,21 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\Users\usnam\Documents\GitHub\SPRO4\Hardware\precond\opamp2.net
+Start Time: Mon May  4 21:55:13 2026
+solver = Alternate
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = trap
+Instance "u1:M2": Length shorter than recommended for a level 3 MOSFET.
+Instance "u2:M2": Length shorter than recommended for a level 3 MOSFET.
+Direct Newton iteration for .op point succeeded.
+
+Simulation stopped by user.
+Total elapsed time: 125.818 seconds.
+
+Files loaded:
+C:\Users\usnam\Documents\GitHub\SPRO4\Hardware\precond\opamp2.net
+C:\Users\usnam\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\usnam\Documents\GitHub\SPRO4\Hardware\precond\spice\AO3400.lib
+C:\Users\usnam\Documents\GitHub\SPRO4\Hardware\precond\spice\AO3401A.mod
+

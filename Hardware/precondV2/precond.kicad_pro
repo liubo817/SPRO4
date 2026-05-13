@@ -188,8 +188,9 @@
       ],
       "track_widths": [
         0.0,
-        0.2,
-        0.5
+        0.35,
+        0.5,
+        0.75
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -221,10 +222,6 @@
         {
           "diameter": 0.0,
           "drill": 0.0
-        },
-        {
-          "diameter": 0.6,
-          "drill": 0.3
         }
       ],
       "zones_allow_external_fillets": false
@@ -236,7 +233,13 @@
       "mfg": "",
       "mpn": ""
     },
-    "layer_pairs": [],
+    "layer_pairs": [
+      {
+        "bottomLayer": 2,
+        "enabled": true,
+        "topLayer": 0
+      }
+    ],
     "layer_presets": [],
     "viewports": []
   },
@@ -470,7 +473,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "pcb_old.kicad_pro",
+    "filename": "precond.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -506,7 +509,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "/nigga",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -628,6 +631,11 @@
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "1b3d796b-04c2-4e3e-92b7-8b7b30957c7c",
+      "Root"
+    ]
+  ],
   "text_variables": {}
 }

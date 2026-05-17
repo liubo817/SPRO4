@@ -41,6 +41,7 @@ entity decimator is
         i_adc_in : in std_logic_vector(15 downto 0);
 
         i_dec_factor : in std_logic_vector(7 downto 0);
+        o_dec_valid : out std_logic;
         o_dec_output : out std_logic_vector(15 downto 0)
 
 
@@ -72,9 +73,11 @@ begin
                         decimated_valid <= '1';
                         counter <= (others => '0');
                         accu_register <= (others => '0');
+                        o_dec_valid <= '1';
                     else
                         accu_register <= accu_register + unsigned(i_adc_in);
                         counter <= counter + 1;
+                        o_dec_valid <= '0';
                     end if;
                 end if;
             end if;

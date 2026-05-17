@@ -1,0 +1,24 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot osc_tb_behav xil_defaultlib.osc_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-1537] value 0 is out of target constraint range 0 to -1 [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sources_1/imports/Firmware/Oscilloscope/Oscilloscope.srcs/sources_1/new/wave_generator.vhd:28]
+WARNING: [VRFC 10-1537] value 0 is out of target constraint range 0 to -1 [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sources_1/imports/Firmware/Oscilloscope/Oscilloscope.srcs/sources_1/new/wave_generator.vhd:36]
+WARNING: [VRFC 10-1537] value 0 is out of target constraint range 0 to -1 [C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sources_1/imports/Firmware/Oscilloscope/Oscilloscope.srcs/sources_1/new/wave_generator.vhd:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.uart_tx [\uart_tx(g_baud=1000000)\]
+Compiling architecture behavioral of entity xil_defaultlib.uart_rx [\uart_rx(g_baud=1000000)\]
+Compiling architecture structural of entity xil_defaultlib.uart_top [\uart_top(g_baud=1000000)\]
+Compiling architecture behavioral of entity xil_defaultlib.wave_generator [\wave_generator(clk_div_n=1)\]
+Compiling architecture structural of entity xil_defaultlib.osc [\osc(g_baud=1000000,clk_div_n=1)...]
+Compiling architecture behavioral of entity xil_defaultlib.osc_tb
+Built simulation snapshot osc_tb_behav

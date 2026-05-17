@@ -1,0 +1,15 @@
+Time resolution is 1 ps
+Note: TEST 1: Sending duty=0x40, wave_sel=PWM
+Time: 200 ns  Iteration: 0  Process: /osc_tb/line__86  File: C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sim_1/new/tb_osc.vhd
+Note: TEST 1: Check pwm_out toggling in waveform viewer
+Time: 224 ns  Iteration: 0  Process: /osc_tb/line__86  File: C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sim_1/new/tb_osc.vhd
+Note: TEST 2: Sending duty=0x80, wave_sel=PWM
+Time: 224 ns  Iteration: 0  Process: /osc_tb/line__86  File: C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sim_1/new/tb_osc.vhd
+Note: TEST 2: PWM duty widened, check waveform viewer
+Time: 248 ns  Iteration: 0  Process: /osc_tb/line__86  File: C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sim_1/new/tb_osc.vhd
+Note: TEST 3: Sending wave_sel=Sawtooth
+Time: 248 ns  Iteration: 0  Process: /osc_tb/line__86  File: C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sim_1/new/tb_osc.vhd
+Note: TEST 3: saw_out should ramp 0->255, check waveform viewer
+Time: 5388 ns  Iteration: 0  Process: /osc_tb/line__86  File: C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sim_1/new/tb_osc.vhd
+Note: TEST 4: Pulsing ADC valid
+Time: 5388 ns  Iteration: 0  Process: /osc_tb/line__86  File: C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sim_1/new/tb_osc.vhd

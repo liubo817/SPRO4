@@ -1,0 +1,11 @@
+0.7
+2020.2
+Nov 14 2025
+19:37:27
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sim_1/new/tb_osc.vhd,1776338051,vhdl,,,,osc_tb,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sim_1/new/tb_wave_generator.vhd,1776338645,vhdl,,,,wave_generator_tb,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sources_1/imports/Firmware/Oscilloscope/Oscilloscope.srcs/sources_1/new/wave_generator.vhd,1776336467,vhdl,,,,wave_generator,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sources_1/imports/Firmware/UART module/UART module.srcs/sources_1/new/uart_rx.vhd,1776338789,vhdl,,,,uart_rx,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sources_1/imports/Firmware/UART module/UART module.srcs/sources_1/new/uart_top.vhd,1776338798,vhdl,,,,uart_top,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sources_1/imports/Firmware/UART module/UART module.srcs/sources_1/new/uart_tx.vhd,1776338785,vhdl,,,,uart_tx,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/SPRO4/Firmware/Generation_UART/Generation_UART.srcs/sources_1/new/osc.vhd,1776338815,vhdl,,,,osc,,,,,,,,

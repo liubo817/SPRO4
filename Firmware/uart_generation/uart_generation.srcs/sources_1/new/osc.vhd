@@ -21,6 +21,14 @@ entity osc is
         -- XADC
         vp_in       : in  std_logic;
         vn_in       : in  std_logic;
+        
+        -- debug LED
+        led : out std_logic;
+        
+        led2 : out std_logic;
+        led3 : out std_logic;
+        led4 : out std_logic;
+        led5 : out std_logic;
 
         -- Wave outputs
         pwm_out     : out std_logic
@@ -43,16 +51,25 @@ architecture Structural of osc is
 
             i_tx_data    : in  std_logic_vector(7 downto 0);
             i_adc_valid  : in  std_logic;
+            
+            o_trig_level : out std_logic_vector(15 downto 0);
+            o_trig_type  : out std_logic;
+            o_dec_factor : out std_logic_vector(7 downto 0);
+            o_arm_trig   : out std_logic;
 
             o_tx_busy    : out std_logic;
             o_tx         : out std_logic;
             i_rx         : in  std_logic;
+            
+            o_led : out std_logic;
 
             o_duty       : out std_logic_vector(3 downto 0);
             o_freq_sel   : out std_logic_vector(3 downto 0);
 
             i_trig_good  : in  std_logic;
             o_read_req   : out std_logic
+            
+            
         );
     end component;
 
@@ -61,21 +78,21 @@ architecture Structural of osc is
     -------------------------------------------------------------------------
     component xadc_wiz_0
         port (
-            dclk_in     : in  std_logic;
-            reset_in    : in  std_logic;
-            di_in       : in  std_logic_vector(15 downto 0);
-            daddr_in    : in  std_logic_vector(6 downto 0);
-            den_in      : in  std_logic;
-            dwe_in      : in  std_logic;
-            drdy_out    : out std_logic;
-            do_out      : out std_logic_vector(15 downto 0);
-            vp_in       : in  std_logic;
-            vn_in       : in  std_logic;
-            eoc_out     : out std_logic;
-            channel_out : out std_logic_vector(4 downto 0);
-            alarm_out   : out std_logic;
-            eos_out     : out std_logic;
-            busy_out    : out std_logic
+            dclk_in     : in  std_logic; -- digital clock input
+            reset_in    : in  std_logic; -- what do you think?
+            di_in       : in  std_logic_vector(15 downto 0); -- drp data in
+            daddr_in    : in  std_logic_vector(6 downto 0); -- drp address. this is how you choose the read address (temp or external or voltage reg etc)
+            den_in      : in  std_logic; -- drp enable. pulse to activate comm
+            dwe_in      : in  std_logic; -- drp write enable. low to read high to write
+            drdy_out    : out std_logic; -- drp ready. tells you if a read is ready
+            do_out      : out std_logic_vector(15 downto 0); -- data out
+            vp_in       : in  std_logic; -- adc input pos
+            vn_in       : in  std_logic; -- adc input neg
+            eoc_out     : out std_logic; -- pulses when an adc conversion is done
+            channel_out : out std_logic_vector(4 downto 0); -- output what channel is used
+            alarm_out   : out std_logic; -- high is an alarm triggers (e.g. overvoltage)
+            eos_out     : out std_logic; -- end of seq (not used?)
+            busy_out    : out std_logic -- adc busy
         );
     end component;
 
@@ -115,7 +132,12 @@ architecture Structural of osc is
             i_adc_data    : in  std_logic_vector(15 downto 0);
             i_adc_valid   : in  std_logic;
 
-            i_dec_factor  : in  std_logic_vector(7 downto 0)
+            i_dec_factor  : in  std_logic_vector(7 downto 0);
+            
+            o_led2 : out std_logic;
+            o_led3 : out std_logic;
+            o_led4 : out std_logic;
+            o_led5 : out std_logic
         );
     end component;
 
@@ -154,24 +176,24 @@ begin
             dclk_in     => clk,
             reset_in    => '0',
 
-            di_in       => (others => '0'),
-            daddr_in    => "0000011",
+            di_in       => (others => '0'), -- no data in
+            daddr_in    => "0000011", -- read address
 
-            den_in      => eoc,
-            dwe_in      => '0',
+            den_in      => eoc, -- pulses itself basically
+            dwe_in      => '0', -- we're not doing any writes
 
-            drdy_out    => drdy,
-            do_out      => xadc_out,
+            drdy_out    => drdy, -- read ready
+            do_out      => xadc_out, -- whaddya think
 
-            vp_in       => vp_in,
-            vn_in       => vn_in,
+            vp_in       => vp_in, -- yes
+            vn_in       => vn_in, -- yes
 
-            eoc_out     => eoc,
+            eoc_out     => eoc, -- end of conversion
 
-            channel_out => open,
-            alarm_out   => open,
-            eos_out     => open,
-            busy_out    => open
+            channel_out => open, -- we're only using one channel
+            alarm_out   => open, -- we have no alarms
+            eos_out     => open, -- we are not using cycles
+            busy_out    => open -- wedon'tgaf
         );
 
     -------------------------------------------------------------------------
@@ -188,6 +210,10 @@ begin
 
             i_tx_data    => i_tx_data,
             i_adc_valid  => drdy,
+            o_trig_level => trig_level,
+            o_trig_type  => trig_type,
+            o_dec_factor => dec_factor,
+            o_arm_trig   => arm_trigger,
 
             o_tx_busy    => o_tx_busy,
             o_tx         => o_tx,
@@ -197,6 +223,7 @@ begin
             o_freq_sel   => freq_sel_sig,
 
             i_trig_good  => trig_good,
+            o_led => led,
             o_read_req   => read_req
         );
 
@@ -220,8 +247,13 @@ begin
             i_adc_data    => xadc_data,
             i_adc_valid   => drdy,
 
-            i_dec_factor  => dec_factor
-        );
+            i_dec_factor  => dec_factor,
+            
+            o_led2 => led2,
+            o_led3 => led3,
+            o_led4 => led4,
+            o_led5 => led5
+            );
 
     -------------------------------------------------------------------------
     -- Wave generator

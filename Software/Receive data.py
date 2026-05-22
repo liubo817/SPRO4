@@ -8,8 +8,8 @@ import math
 # --------------------------
 # Configuration
 # --------------------------
-USE_FAKE  = True    # Set False to read from COM port
-COM_PORT  = "COM5"
+USE_FAKE  = False    # Set False to read from COM port
+COM_PORT  = "COM8"
 BAUD_RATE = 115200
 
 # --------------------------
@@ -261,6 +261,8 @@ class OscilloscopeApp(QtWidgets.QMainWindow):
             try:
                 self.ser = serial.Serial(COM_PORT, BAUD_RATE, timeout=0.1)
                 self._set_status(f"UART  ·  {COM_PORT}  ✓", "#00e5ff")
+                packet = build_config_packet(10, 0, 100)
+                self._send_uart(packet)
             except serial.SerialException as exc:
                 self._set_status(f"UART ERR  ·  {exc}", "#ff5555")
 

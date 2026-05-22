@@ -29,6 +29,21 @@ set_property IOSTANDARD LVCMOS33 [get_ports {pwm_out}]
 set_property PACKAGE_PIN T22 [get_ports {o_tx_busy}]
 set_property IOSTANDARD LVCMOS33 [get_ports {o_tx_busy}]
 
+set_property PACKAGE_PIN T21 [get_ports {led}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led}]
+
+set_property PACKAGE_PIN U22 [get_ports {led2}]    
+set_property IOSTANDARD LVCMOS33 [get_ports {led2}]
+
+set_property PACKAGE_PIN U21 [get_ports {led3}]    
+set_property IOSTANDARD LVCMOS33 [get_ports {led3}]
+
+set_property PACKAGE_PIN V22 [get_ports {led4}]    
+set_property IOSTANDARD LVCMOS33 [get_ports {led4}]
+
+set_property PACKAGE_PIN W22 [get_ports {led5}]    
+set_property IOSTANDARD LVCMOS33 [get_ports {led5}]
+
 ## ================= RESET BUTTON =================
 set_property PACKAGE_PIN T18 [get_ports {reset}]
 set_property IOSTANDARD LVCMOS33 [get_ports {reset}]

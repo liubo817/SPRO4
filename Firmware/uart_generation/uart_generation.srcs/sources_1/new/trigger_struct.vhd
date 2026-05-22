@@ -35,7 +35,12 @@ port (
     -- adc stuff
     i_adc_data    : in std_logic_vector(15 downto 0);
     i_adc_valid   : in std_logic;
-    i_dec_factor  : in std_logic_vector(7 downto 0)
+    i_dec_factor  : in std_logic_vector(7 downto 0);
+    
+    o_led2 : out std_logic;
+    o_led3 : out std_logic;
+    o_led4 : out std_logic;
+    o_led5 : out std_logic
 
 );
 end trigger_struct;
@@ -62,11 +67,16 @@ architecture Structural of trigger_struct is
     -- Counters and Pointers
     signal fill_count    : unsigned(11 downto 0) := (others => '0');
     signal trig_ptr      : unsigned(11 downto 0) := (others => '0');
-    signal prev_sample   : signed(15 downto 0) := (others => '0');
+    signal prev_sample   : unsigned(15 downto 0) := (others => '0');
 
     -- Configuration Constants (For a 4096 depth BRAM)
     constant PRE_TRIG_DEPTH  : unsigned(11 downto 0) := to_unsigned(2048, 12);
     constant POST_TRIG_DEPTH : unsigned(11 downto 0) := to_unsigned(2047, 12);
+    
+    signal auto_trig_cnt : unsigned(15 downto 0) := (others => '0');
+
+    -- You can also turn this into an i_auto_timeout input pin later if desired!
+    constant AUTO_TIMEOUT_VAL : unsigned(15 downto 0) := x"FFFF";
 
     component decimator is
         port (
@@ -117,12 +127,18 @@ begin
                         wr_ptr     <= (others => '0');
                         fill_count <= (others => '0');
                         byte_sel   <= '0';
-                        if arm_trigger = '1' then
-                            current_state <= PRE_FILL;
-                        end if;
+                        auto_trig_cnt <= (others => '0');
+                        --if arm_trigger = '1' then
+                        current_state <= PRE_FILL;
+                        --end if;
+                        o_led3 <= '1';
+                        o_led4 <= '0';
+                        o_led5 <= '0';
 
                     when PRE_FILL =>
                         -- Only capture and step forward when downsampled data arrives
+                        o_led4 <= '1';
+                        o_led3 <= '0';
                         if dec_data_v = '1' then
                             circular_bram(to_integer(wr_ptr)) <= o_dec_output;
                             wr_ptr     <= wr_ptr + 1;
@@ -135,24 +151,33 @@ begin
 
                     when ARMED =>
                         if dec_data_v = '1' then
-                            circular_bram(to_integer(wr_ptr)) <= o_dec_output;
-                            wr_ptr <= wr_ptr + 1;
+                            circular_bram(to_integer(wr_ptr)) <= o_dec_output; -- write data into bram
+                            wr_ptr <= wr_ptr + 1; -- increment bram pointer
                             
-                            -- Rising Edge Trigger Check
-                            if i_trig_type = '1' then
-                                if (prev_sample < signed(i_trig_level)) and (signed(o_dec_output) >= signed(i_trig_level)) then
+                            auto_trig_cnt <= auto_trig_cnt + 1;
+                            o_led5 <= '1';
+
+                            if arm_trigger = '1' then
+                                trig_ptr      <= wr_ptr;        -- Latch memory exactly where it is right now
+                                fill_count    <= (others => '0');
+                                auto_trig_cnt <= (others => '0');
+                                current_state <= POST_FILL;     -- Head straight to the finish line
+                            end if;
+                            
+                                -- Trigger Check
+                                if ((i_trig_type = '1' and prev_sample < unsigned(i_trig_level) and unsigned(o_dec_output) >= unsigned(i_trig_level)) or (i_trig_type = '0' and prev_sample > unsigned(i_trig_level) and unsigned(o_dec_output) <= unsigned(i_trig_level))) then
                                     trig_ptr      <= wr_ptr; -- Latch the trigger location
                                     fill_count    <= (others => '0');
+                                    auto_trig_cnt <= (others => '0'); -- Clear watchdog
                                     current_state <= POST_FILL;
-                                end if;
-                            -- Falling Edge Trigger Check
-                            else
-                                if (prev_sample > signed(i_trig_level)) and (signed(o_dec_output) <= signed(i_trig_level)) then
-                                    trig_ptr      <= wr_ptr;
+                                
+                                elsif auto_trig_cnt >= AUTO_TIMEOUT_VAL then
+                                    trig_ptr      <= wr_ptr;          -- Capture wherever the pointer is right now
                                     fill_count    <= (others => '0');
-                                    current_state <= POST_FILL;
+                                    auto_trig_cnt <= (others => '0'); -- Clear watchdog
+                                    current_state <= POST_FILL;       -- Gracefully proceed to dump data to Python
                                 end if;
-                            end if;
+                            
                         end if;
 
                     when POST_FILL =>
@@ -197,7 +222,7 @@ begin
 
                 -- Track histories only on valid data iterations
                 if dec_data_v = '1' then
-                    prev_sample <= signed(o_dec_output);
+                    prev_sample <= unsigned(o_dec_output);
                 end if;
 
             end if;
@@ -213,6 +238,11 @@ begin
             bram_read_data <= circular_bram(to_integer(rd_ptr));
         end if;
     end process;
+    
+    o_led2 <= i_adc_data(0); -- Bit 0 (Least Significant Bit)
+    -- o_led3 <= i_adc_data(1); -- Bit 1
+    -- o_led4 <= i_adc_data(2); -- Bit 2
+    -- o_led5 <= i_adc_data(3); -- Bit 3
     
     -- Multiplex high and low bytes of the extracted memory data out to your UART
     o_buffer <= bram_read_data(15 downto 8) when byte_sel = '0' else 

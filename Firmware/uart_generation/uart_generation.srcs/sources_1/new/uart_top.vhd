@@ -21,12 +21,12 @@ entity uart_top is
     generic (
         G_CLK_HZ     : integer := 100_000_000;
         G_BAUD       : integer := 115200;
-        G_FRAME_SIZE : integer := 256
-    );
-    port (
+        G_FRAME_SIZE : integer := 8192
         ---------------------------------------------------------------------
         -- System
         ---------------------------------------------------------------------
+        );
+        port (
         i_clk        : in  std_logic;
         i_rst        : in  std_logic;
 
@@ -38,6 +38,10 @@ entity uart_top is
         i_trig_good  : in  std_logic;
 
         o_read_req   : out std_logic;
+        o_trig_level : out std_logic_vector(15 downto 0);
+        o_trig_type  : out std_logic;
+        o_dec_factor : out std_logic_vector(7 downto 0);
+        o_arm_trig   : out std_logic;
 
         ---------------------------------------------------------------------
         -- UART pins
@@ -45,6 +49,8 @@ entity uart_top is
         i_rx         : in  std_logic;
         o_tx         : out std_logic;
         o_tx_busy    : out std_logic;
+        
+        o_led : out std_logic;
 
         ---------------------------------------------------------------------
         -- Wave generator controls
@@ -131,8 +137,9 @@ architecture rtl of uart_top is
         TX_SEND_AA,
         TX_SEND_55,
         TX_SEND_LEN,
-        TX_REQ_DATA,
+        --TX_REQ_DATA,
         TX_SEND_DATA,
+        TX_WAIT_BUSY_START,
         TX_WAIT_BUSY,
         TX_SEND_CHK
     );
@@ -142,6 +149,8 @@ architecture rtl of uart_top is
     signal tx_index : unsigned(15 downto 0) := (others => '0');
 
     signal checksum : unsigned(7 downto 0) := (others => '0');
+
+    signal tx_ret_state : tx_state_t := TX_IDLE;
 
 begin
 
@@ -179,6 +188,9 @@ begin
         );
 
     o_tx_busy <= tx_busy_int;
+    o_trig_level <= x"00" & trig_reg;
+    o_trig_type <= '0';
+    o_dec_factor <= tb_hi_reg;
 
     -------------------------------------------------------------------------
     -- RX Packet Parser
@@ -193,11 +205,18 @@ begin
             if i_rst = '1' then
 
                 rx_state <= RX_WAIT_AA;
+                
+                trig_reg <= x"7F";
+                o_trig_type <= '0';
+                tb_hi_reg <= x"01";
+
+                
 
                 o_duty     <= "1000"; -- 50%
                 o_freq_sel <= "0001"; -- 100 Hz
 
             else
+                o_arm_trig <= '0';
 
                 if rx_valid = '1' then
 
@@ -251,6 +270,7 @@ begin
 
                         -----------------------------------------------------
                         when RX_WAIT_FF =>
+                            o_arm_trig <= '1';
 
                             if rx_data = x"FF" then
 
@@ -277,6 +297,8 @@ begin
                 end if;
             end if;
         end if;
+        
+    
     end process;
 
     -------------------------------------------------------------------------
@@ -312,7 +334,7 @@ begin
                             tx_index <= (others => '0');
                             checksum <= (others => '0');
 
-                            tx_state <= TX_SEND_AA;
+                            tx_state <= TX_SEND_55;
 
                         end if;
 
@@ -324,9 +346,11 @@ begin
                             tx_data_int  <= x"AA";
                             tx_valid_int <= '1';
 
-                            tx_state <= TX_SEND_55;
+                            tx_ret_state <= TX_SEND_55;
+                            tx_state     <= TX_WAIT_BUSY_START;
 
                         end if;
+                        o_led <='1';
 
                     ---------------------------------------------------------
                     when TX_SEND_55 =>
@@ -336,7 +360,8 @@ begin
                             tx_data_int  <= x"55";
                             tx_valid_int <= '1';
 
-                            tx_state <= TX_SEND_LEN;
+                            tx_ret_state <= TX_SEND_LEN;
+                            tx_state     <= TX_WAIT_BUSY_START;
 
                         end if;
 
@@ -345,34 +370,45 @@ begin
 
                         if tx_busy_int = '0' then
 
-                            tx_data_int <= std_logic_vector(
-                                to_unsigned(G_FRAME_SIZE, 8));
+                            tx_data_int <= x"00";
 
                             tx_valid_int <= '1';
 
-                            tx_state <= TX_REQ_DATA;
+                            --tx_state <= TX_REQ_DATA;
+                            --tx_state <= TX_SEND_DATA;
+                            tx_ret_state <= TX_SEND_DATA;
+                            tx_state     <= TX_WAIT_BUSY_START;
 
                         end if;
 
                     ---------------------------------------------------------
-                    when TX_REQ_DATA =>
+                    --when TX_REQ_DATA =>
 
-                        o_read_req <= '1';
+                        --o_read_req <= '1';
 
-                        tx_state <= TX_SEND_DATA;
+                        --tx_state <= TX_SEND_DATA;
 
                     ---------------------------------------------------------
                     when TX_SEND_DATA =>
 
                         if tx_busy_int = '0' then
+                            o_read_req <= '1';
 
                             tx_data_int  <= i_tx_data;
                             tx_valid_int <= '1';
 
                             checksum <= checksum + unsigned(i_tx_data);
 
-                            tx_state <= TX_WAIT_BUSY;
+                            tx_ret_state <= TX_WAIT_BUSY;
 
+                            tx_state <= TX_WAIT_BUSY_START;
+
+                        end if;
+                        
+                    when TX_WAIT_BUSY_START =>
+                        -- Give the sub-module a cycle to drop into busy mode
+                        if tx_busy_int = '1' then 
+                            tx_state <= tx_ret_state;
                         end if;
 
                     ---------------------------------------------------------
@@ -380,8 +416,7 @@ begin
 
                         if tx_busy_int = '0' then
 
-                            if tx_index =
-                                to_unsigned(G_FRAME_SIZE - 1, 16) then
+                            if tx_index = to_unsigned(G_FRAME_SIZE - 1, 16) then
 
                                 tx_state <= TX_SEND_CHK;
 
@@ -389,7 +424,7 @@ begin
 
                                 tx_index <= tx_index + 1;
 
-                                tx_state <= TX_REQ_DATA;
+                                tx_state <= TX_SEND_DATA;
 
                             end if;
                         end if;

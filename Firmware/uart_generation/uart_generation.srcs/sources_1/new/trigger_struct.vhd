@@ -129,7 +129,7 @@ begin
                         byte_sel   <= '0';
                         auto_trig_cnt <= (others => '0');
                         --if arm_trigger = '1' then
-                        current_state <= PRE_FILL;
+                            current_state <= PRE_FILL;
                         --end if;
                         o_led3 <= '1';
                         o_led4 <= '0';

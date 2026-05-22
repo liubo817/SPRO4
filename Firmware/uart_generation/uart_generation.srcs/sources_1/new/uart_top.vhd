@@ -334,7 +334,7 @@ begin
                             tx_index <= (others => '0');
                             checksum <= (others => '0');
 
-                            tx_state <= TX_SEND_55;
+                            tx_state <= TX_SEND_AA;
 
                         end if;
 

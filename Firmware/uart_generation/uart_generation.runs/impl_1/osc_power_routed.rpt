@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date             : Fri May 22 10:22:30 2026
+| Date             : Fri May 22 14:04:47 2026
 | Host             : JoniDeLaMircesti running 64-bit major release  (build 9200)
 | Command          : report_power -file osc_power_routed.rpt -pb osc_power_summary_routed.pb -rpx osc_power_routed.rpx
 | Design           : osc
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.121        |
+| Total On-Chip Power (W)  | 0.118        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.015        |
+| Dynamic (W)              | 0.012        |
 | Device Static (W)        | 0.106        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 83.6         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |      797 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      310 |     53200 |            0.58 |
-|   CARRY4       |    <0.001 |       39 |     13300 |            0.29 |
-|   Register     |    <0.001 |      331 |    106400 |            0.31 |
+| Slice Logic    |     0.001 |      855 |       --- |             --- |
+|   LUT as Logic |     0.001 |      344 |     53200 |            0.65 |
+|   CARRY4       |    <0.001 |       47 |     13300 |            0.35 |
+|   Register     |    <0.001 |      339 |    106400 |            0.32 |
 |   Others       |     0.000 |       16 |       --- |             --- |
-| Signals        |    <0.001 |      629 |       --- |             --- |
+| Signals        |    <0.001 |      693 |       --- |             --- |
 | Block RAM      |     0.004 |        2 |       140 |            1.43 |
-| I/O            |     0.005 |       11 |       200 |            5.50 |
+| I/O            |     0.002 |       11 |       200 |            5.50 |
 | XADC           |     0.002 |        1 |       --- |             --- |
 | Static Power   |     0.106 |          |           |                 |
-| Total          |     0.121 |          |           |                 |
+| Total          |     0.118 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.015 |       0.008 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.016 |       0.008 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -146,13 +146,14 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------+-----------+
-| Name        | Power (W) |
-+-------------+-----------+
-| osc         |     0.015 |
-|   u_trigger |     0.005 |
-|   u_uart    |     0.002 |
-|   xadc_inst |     0.002 |
-+-------------+-----------+
++-----------------+-----------+
+| Name            | Power (W) |
++-----------------+-----------+
+| osc             |     0.012 |
+|   u_trigger     |     0.006 |
+|     u_decimator |     0.001 |
+|   u_uart        |     0.002 |
+|   xadc_inst     |     0.002 |
++-----------------+-----------+
 
 

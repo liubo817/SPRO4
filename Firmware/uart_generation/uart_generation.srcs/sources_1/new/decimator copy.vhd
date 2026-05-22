@@ -50,36 +50,30 @@ end decimator;
 
 architecture Behavioral of decimator is
 
-    signal accu_register : unsigned(23 downto 0) := (others => '0'); -- wider!
-    signal counter       : unsigned(7 downto 0)  := (others => '0');
+    signal accu_register   : unsigned(15 downto 0) := (others => '0');
+    signal counter         : unsigned(7 downto 0) := (others => '0');
 
 begin
     process(d_clk)
-        variable accu_next : unsigned(23 downto 0);  -- variable: updates immediately
     begin
         if rising_edge(d_clk) then
             if d_reset = '1' then
-                counter       <= (others => '0');
-                o_dec_valid   <= '0';
-                accu_register <= (others => '0');
-                o_dec_output  <= (others => '0');
-            else
+                counter <= (others => '0');
                 o_dec_valid <= '0';
+                accu_register <= (others => '0');
+                o_dec_output <= (others => '0');
+            else 
                 if i_adc_valid = '1' then
-                    accu_next := accu_register + unsigned(i_adc_in);  -- immediate
-
-                    if counter >= (shift_left(to_unsigned(1, counter'length), 
-                                   to_integer(unsigned(i_dec_factor))) - 1) then
-                        -- accu_next already includes the final sample
-                        o_dec_output  <= std_logic_vector(
-                            shift_right(accu_next, to_integer(unsigned(i_dec_factor)))
-                            (15 downto 0));
-                        o_dec_valid   <= '1';
+                    if counter >= (shift_left(to_unsigned(1, counter'length), to_integer(unsigned(i_dec_factor))) - 1) then
+                        accu_register <= accu_register + unsigned(i_adc_in);
+                        o_dec_output <= std_logic_vector(shift_right(accu_register, to_integer(unsigned(i_dec_factor))));
+                        counter <= (others => '0');
                         accu_register <= (others => '0');
-                        counter       <= (others => '0');
+                        o_dec_valid <= '1';
                     else
-                        accu_register <= accu_next;
-                        counter       <= counter + 1;
+                        accu_register <= accu_register + unsigned(i_adc_in);
+                        counter <= counter + 1;
+                        o_dec_valid <= '0';
                     end if;
                 end if;
             end if;

@@ -360,7 +360,7 @@ begin
                             tx_data_int  <= x"55";
                             tx_valid_int <= '1';
 
-                            tx_ret_state <= TX_SEND_LEN;
+                            tx_ret_state <= TX_SEND_DATA;
                             tx_state     <= TX_WAIT_BUSY_START;
 
                         end if;
@@ -418,7 +418,7 @@ begin
 
                             if tx_index = to_unsigned(G_FRAME_SIZE - 1, 16) then
 
-                                tx_state <= TX_SEND_CHK;
+                                tx_state <= TX_IDLE;
 
                             else
 

@@ -50,12 +50,14 @@ end decimator;
 
 architecture Behavioral of decimator is
 
-    signal accu_register : unsigned(23 downto 0) := (others => '0'); -- wider!
+    signal accu_register : unsigned(23 downto 0) := (others => '0'); -- 24-bit so it doesn't overflow
     signal counter       : unsigned(7 downto 0)  := (others => '0');
 
 begin
     process(d_clk)
         variable accu_next : unsigned(23 downto 0);  -- variable: updates immediately
+        variable shifted_result : unsigned(23 downto 0); -- stores a shift left by 4, because 
+        
     begin
         if rising_edge(d_clk) then
             if d_reset = '1' then
@@ -66,14 +68,13 @@ begin
             else
                 o_dec_valid <= '0';
                 if i_adc_valid = '1' then
-                    accu_next := accu_register + unsigned(i_adc_in);  -- immediate
+                    accu_next := accu_register + unsigned(i_adc_in(15 downto 4));  -- immediate
+                    shifted_result := shift_right(accu_next, to_integer(unsigned(i_dec_factor)));
 
                     if counter >= (shift_left(to_unsigned(1, counter'length), 
                                    to_integer(unsigned(i_dec_factor))) - 1) then
                         -- accu_next already includes the final sample
-                        o_dec_output  <= std_logic_vector(
-                            shift_right(accu_next, to_integer(unsigned(i_dec_factor)))
-                            (15 downto 0));
+                        o_dec_output  <= std_logic_vector(shifted_result(15 downto 0));
                         o_dec_valid   <= '1';
                         accu_register <= (others => '0');
                         counter       <= (others => '0');

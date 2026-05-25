@@ -31,7 +31,8 @@ entity osc is
         led5 : out std_logic;
 
         -- Wave outputs
-        pwm_out     : out std_logic
+        pwm_out     : out std_logic;
+        buck_out    : out std_logic
     );
 end entity;
 
@@ -109,6 +110,19 @@ architecture Structural of osc is
             duty     : in  std_logic_vector(3 downto 0);
             freq_sel : in  std_logic_vector(3 downto 0);
             pwm_out  : out std_logic
+        );
+    end component;
+    
+    component PWM_generator is
+        generic (
+            CLK_FREQ_HZ  : integer := 100_000_000;
+            PWM_FREQ_HZ  : integer := 15_000;    -- change this: 10000-20000
+            DUTY_PERCENT : integer := 50
+        );
+        port (
+            clk     : in  STD_LOGIC;
+            reset   : in  STD_LOGIC;
+            buck_out : out STD_LOGIC
         );
     end component;
 
@@ -254,6 +268,19 @@ begin
             o_led4 => led4,
             o_led5 => led5
             );
+            
+    -------------------------------------------------------------------------
+    -- Buck PWM generator
+    -------------------------------------------------------------------------
+    u_buck_pwm : PWM_generator
+        generic map (
+            CLK_FREQ_HZ => G_CLK_HZ
+        )
+        port map (
+            clk      => clk,
+            reset    => reset,
+            buck_out => buck_out
+        );
 
     -------------------------------------------------------------------------
     -- Wave generator

@@ -59,7 +59,6 @@ OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
 set_param chipscope.maxJobs 4
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -83,6 +82,7 @@ read_vhdl -library xil_defaultlib {
   C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/wave_generator.vhd
   C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/trigger_struct.vhd
   C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/decimator.vhd
+  C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/new/buck_pwm.vhd
 }
 read_ip -quiet C:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/usnam/Documents/GitHub/SPRO4/Firmware/uart_generation/uart_generation.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc]

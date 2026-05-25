@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Fri May 22 14:04:17 2026
+| Date         : Mon May 25 02:11:59 2026
 | Host         : JoniDeLaMircesti running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file osc_control_sets_placed.rpt
 | Design       : osc
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    28 |
-|    Minimum number of control sets                        |    28 |
+| Total control sets                                       |    30 |
+|    Minimum number of control sets                        |    30 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    53 |
+| Unused register locations in slices containing registers |    55 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,11 +39,11 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    28 |
+| Total control sets |    30 |
 | >= 0 to < 4        |     2 |
-| >= 4 to < 6        |     0 |
+| >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |    12 |
+| >= 8 to < 10       |    13 |
 | >= 10 to < 12      |     2 |
 | >= 12 to < 14      |     5 |
 | >= 14 to < 16      |     0 |
@@ -58,49 +58,51 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              23 |            8 |
+| No           | No                    | No                     |              22 |           10 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              53 |           19 |
-| Yes          | No                    | No                     |              67 |           24 |
+| No           | Yes                   | No                     |              60 |           21 |
+| Yes          | No                    | No                     |              67 |           23 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             196 |           59 |
+| Yes          | Yes                   | No                     |             204 |           65 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+--------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+--------------+
-|  Clock Signal  |                         Enable Signal                        |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+--------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG | u_trigger/u_decimator/o_led51_out                            |                                                             |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG | u_trigger/o_led3_i_1_n_0                                     |                                                             |                1 |              2 |         2.00 |
-|  clk_IBUF_BUFG | u_wave/clk_en                                                | reset_IBUF                                                  |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | u_uart/u_tx/shreg[7]_i_1_n_0                                 |                                                             |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | u_uart/u_tx/FSM_sequential_state_reg[0]_0[0]                 | reset_IBUF                                                  |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | u_uart/u_tx/tx_state_reg[1][0]                               | reset_IBUF                                                  |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | u_uart/u_rx/o_data[7]_i_1_n_0                                |                                                             |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | u_uart/u_rx/o_valid_reg_0[0]                                 | reset_IBUF                                                  |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | u_uart/u_rx/FSM_onehot_rx_state_reg[6][0]                    |                                                             |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | u_uart/u_rx/o_valid_reg_1[0]                                 | reset_IBUF                                                  |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | u_uart/u_rx/FSM_onehot_rx_state_reg[4][0]                    |                                                             |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | u_uart/u_rx/chk_reg_reg[4][0]                                | reset_IBUF                                                  |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | u_uart/u_rx/E[0]                                             | reset_IBUF                                                  |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG | u_uart/u_rx/FSM_onehot_rx_state_reg[3][0]                    |                                                             |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | u_uart/u_tx/tick_cnt_0[0]                                    | reset_IBUF                                                  |                4 |             10 |         2.50 |
-|  clk_IBUF_BUFG | u_uart/u_rx/tick_cnt[0]                                      | reset_IBUF                                                  |                4 |             10 |         2.50 |
-|  clk_IBUF_BUFG |                                                              | u_wave/div_counter[0]_i_1_n_0                               |                3 |             12 |         4.00 |
-|  clk_IBUF_BUFG | u_trigger/u_decimator/FSM_sequential_current_state_reg[2]_0  |                                                             |                4 |             12 |         3.00 |
-|  clk_IBUF_BUFG | u_trigger/u_decimator/FSM_sequential_current_state_reg[0][0] | reset_IBUF                                                  |                5 |             12 |         2.40 |
-|  clk_IBUF_BUFG | u_trigger/u_decimator/FSM_sequential_current_state_reg[1][0] |                                                             |                4 |             12 |         3.00 |
-|  clk_IBUF_BUFG | u_trigger/u_decimator/o_dec_valid_reg_0[0]                   | reset_IBUF                                                  |                3 |             12 |         4.00 |
-|  clk_IBUF_BUFG | u_uart/u_tx/E[0]                                             | reset_IBUF                                                  |                4 |             16 |         4.00 |
-|  clk_IBUF_BUFG | u_uart/E[0]                                                  | reset_IBUF                                                  |                7 |             16 |         2.29 |
-|  clk_IBUF_BUFG | u_trigger/u_decimator/o_led51_out                            | u_trigger/u_decimator/FSM_sequential_current_state_reg[0]_0 |                4 |             16 |         4.00 |
-|  clk_IBUF_BUFG | u_trigger/u_decimator/o_dec_valid                            | reset_IBUF                                                  |                6 |             16 |         2.67 |
-|  clk_IBUF_BUFG |                                                              |                                                             |                8 |             23 |         2.88 |
-|  clk_IBUF_BUFG | xadc_inst/drdy_out                                           | u_uart/accu_register[0]                                     |                8 |             32 |         4.00 |
-|  clk_IBUF_BUFG |                                                              | reset_IBUF                                                  |               16 |             41 |         2.56 |
-+----------------+--------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+--------------+
++----------------+----------------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                          Enable Signal                         |                      Set/Reset Signal                     | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+----------------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | u_trigger/u_decimator/o_led51_out                              |                                                           |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | u_trigger/o_led3_i_1_n_0                                       |                                                           |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG |                                                                | u_buck_pwm/div_counter[4]_i_1_n_0                         |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | u_uart/u_tx/shreg[7]_i_1_n_0                                   |                                                           |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_uart/u_tx/E[0]                                               | reset_IBUF                                                |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | u_uart/u_tx/FSM_sequential_state_reg[1]_0[0]                   | reset_IBUF                                                |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_uart/u_rx/chk_reg_reg[0][0]                                  | reset_IBUF                                                |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_uart/u_rx/FSM_onehot_rx_state_reg[4][0]                      |                                                           |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_uart/u_rx/FSM_onehot_rx_state_reg[3][0]                      |                                                           |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_uart/u_rx/FSM_onehot_rx_state_reg[6][0]                      |                                                           |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_uart/u_rx/E[0]                                               | reset_IBUF                                                |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_uart/u_rx/o_valid_reg_0[0]                                   | reset_IBUF                                                |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_uart/u_rx/o_valid_reg_1[0]                                   | reset_IBUF                                                |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_buck_pwm/clk_en                                              | reset_IBUF                                                |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_uart/u_rx/o_data[7]_i_1_n_0                                  |                                                           |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | u_wave/clk_en                                                  | reset_IBUF                                                |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_uart/u_tx/tick_cnt_0[0]                                      | reset_IBUF                                                |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | u_uart/u_rx/tick_cnt[0]                                        | reset_IBUF                                                |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG |                                                                | u_wave/div_counter[0]_i_1__0_n_0                          |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG | u_trigger/u_decimator/o_read_req_reg                           |                                                           |                5 |             12 |         2.40 |
+|  clk_IBUF_BUFG | u_trigger/u_decimator/FSM_sequential_current_state_reg[2]_0[0] |                                                           |                5 |             12 |         2.40 |
+|  clk_IBUF_BUFG | u_trigger/u_decimator/FSM_sequential_current_state_reg[1][0]   | reset_IBUF                                                |                2 |             12 |         6.00 |
+|  clk_IBUF_BUFG | u_trigger/u_decimator/FSM_sequential_current_state_reg[2][0]   | reset_IBUF                                                |                5 |             12 |         2.40 |
+|  clk_IBUF_BUFG | u_uart/u_tx/data_valid_reg[0]                                  | reset_IBUF                                                |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG | u_trigger/u_decimator/o_led51_out                              | u_trigger/u_decimator/FSM_sequential_current_state_reg[0] |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG | u_trigger/u_decimator/o_dec_valid                              | reset_IBUF                                                |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG | u_uart/E[0]                                                    | reset_IBUF                                                |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG |                                                                |                                                           |               10 |             22 |         2.20 |
+|  clk_IBUF_BUFG | xadc_inst/drdy_out                                             | u_uart/accu_register[0]                                   |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG |                                                                | reset_IBUF                                                |               17 |             43 |         2.53 |
++----------------+----------------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+--------------+
 
 

@@ -20,6 +20,12 @@ set_property PACKAGE_PIN Y10 [get_ports {pwm_out}]
 set_property IOSTANDARD LVCMOS33 [get_ports {pwm_out}]
 
 ## ================================================================
+## Buck PWM OUTPUT
+## ================================================================
+set_property PACKAGE_PIN AA9 [get_ports {buck_out}]
+set_property IOSTANDARD LVCMOS33 [get_ports {buck_out}]
+
+## ================================================================
 ## STATUS SIGNAL (OPTIONAL DEBUG)
 ## ================================================================
 # Either ignore it:

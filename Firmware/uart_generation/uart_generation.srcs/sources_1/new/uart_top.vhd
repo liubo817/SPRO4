@@ -249,7 +249,7 @@ begin
                         when RX_TB_LO =>
 
                             tb_lo_reg <= rx_data;
-                            rx_state  <= RX_VOLT;
+                            rx_state  <= RX_TRIG;
 
                         -----------------------------------------------------
                         when RX_VOLT =>
@@ -261,7 +261,7 @@ begin
                         when RX_TRIG =>
 
                             trig_reg <= rx_data;
-                            rx_state <= RX_CHK;
+                            rx_state <= RX_WAIT_FF;
 
                         -----------------------------------------------------
                         when RX_CHK =>
@@ -271,6 +271,7 @@ begin
 
                         -----------------------------------------------------
                         when RX_WAIT_FF =>
+       
                             o_arm_trig <= '1';
 
                             if rx_data = x"FF" then

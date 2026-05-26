@@ -188,9 +188,10 @@ begin
         );
 
     o_tx_busy <= tx_busy_int;
-    o_trig_level <= x"00" & trig_reg;
+    o_trig_level <= tb_hi_reg & tb_lo_reg; -- high byte low byte trollface
     o_trig_type <= '0';
-    o_dec_factor <= tb_hi_reg;
+    o_dec_factor <=trig_reg; -- high byte low byte not trollface
+
 
     -------------------------------------------------------------------------
     -- RX Packet Parser

@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2025.2
-| Date         : Mon May 25 02:11:56 2026
+| Date         : Tue May 26 11:51:49 2026
 | Host         : JoniDeLaMircesti
 | Design       : design_1
 | Device       : xc7z020-clg484-1--

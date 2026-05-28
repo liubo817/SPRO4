@@ -19,11 +19,11 @@
 -- Outputs:
 --   pwm_out  - 1-bit PWM signal
 -- =============================================================================
-
+ 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-
+ 
 entity wave_generator is
     Generic (
         CLK_FREQ_HZ : integer := 100_000_000   -- ZedBoard PL clock
@@ -31,14 +31,14 @@ entity wave_generator is
     Port (
         clk      : in  STD_LOGIC;
         reset    : in  STD_LOGIC;
-        duty     : in  STD_LOGIC_VECTOR(3 downto 0);  -- SW7=MSB, SW5=LSB
+        duty     : in  STD_LOGIC_VECTOR(2 downto 0);  -- SW7=MSB, SW5=LSB  [FIX: was 3 downto 0]
         freq_sel : in  STD_LOGIC_VECTOR(3 downto 0);  -- one-hot, see above
         pwm_out  : out STD_LOGIC
     );
 end wave_generator;
-
+ 
 architecture Behavioral of wave_generator is
-
+ 
     -- -------------------------------------------------------------------------
     -- Clock-enable divider constants
     --   Formula:  DIV = CLK_FREQ_HZ / (target_freq_Hz * 256)
@@ -52,24 +52,26 @@ architecture Behavioral of wave_generator is
     constant DIV_200HZ : integer := CLK_FREQ_HZ / (200  * 256);  -- 1953
     constant DIV_500HZ : integer := CLK_FREQ_HZ / (500  * 256);  --  781
     constant DIV_1KHZ  : integer := CLK_FREQ_HZ / (1000 * 256);  --  390
-
+ 
     signal clk_div_max : integer range 1 to DIV_100HZ := DIV_100HZ;
     signal div_counter : integer range 0 to DIV_100HZ := 0;
     signal clk_en      : STD_LOGIC := '0';
-
+ 
     signal counter     : unsigned(7 downto 0) := (others => '0');
-
+ 
     -- 2-FF synchroniser registers for all async inputs
     signal freq_sel_s1, freq_sel_sync : STD_LOGIC_VECTOR(3 downto 0) := "0001";
-    signal duty_s1,     duty_sync     : STD_LOGIC_VECTOR(3 downto 0) := (others => '0');
-
+    signal duty_s1,     duty_sync     : STD_LOGIC_VECTOR(2 downto 0) := (others => '0');  -- [FIX: was 3 downto 0]
+ 
     -- 3-bit duty expanded to 8-bit threshold (placed at bits [7:5])
     signal duty_8bit : unsigned(7 downto 0);
-
+ 
 begin
-
-    duty_8bit <= unsigned(duty_sync & "0000");
-
+ 
+    -- duty_sync(2:0) padded with 5 LSB zeros → 8-bit threshold
+    -- e.g. "101" → "10100000" = 0xA0 = 160 → 62.5% of 256
+    duty_8bit <= unsigned(duty_sync & "00000");   -- [FIX: was "0000" (4 zeros → 7-bit concat)]
+ 
     -- =========================================================================
     -- Stage 1: 2-FF input synchronisers
     -- =========================================================================
@@ -89,7 +91,7 @@ begin
             end if;
         end if;
     end process p_sync;
-
+ 
     -- =========================================================================
     -- Stage 2: Frequency selection
     -- =========================================================================
@@ -105,7 +107,7 @@ begin
             end case;
         end if;
     end process p_freq_sel;
-
+ 
     -- =========================================================================
     -- Stage 3: Clock-enable generator
     -- =========================================================================
@@ -123,7 +125,7 @@ begin
             end if;
         end if;
     end process p_clk_en;
-
+ 
     -- =========================================================================
     -- Stage 4: Wave counter
     -- =========================================================================
@@ -137,7 +139,7 @@ begin
             end if;
         end if;
     end process p_counter;
-
+ 
     -- =========================================================================
     -- Stage 5: PWM output
     -- =========================================================================
@@ -153,5 +155,5 @@ begin
             end if;
         end if;
     end process p_outputs;
-
+ 
 end Behavioral;

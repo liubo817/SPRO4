@@ -16,6 +16,17 @@ set_property IOSTANDARD LVCMOS33 [get_ports {o_tx}]
 ## ================================================================
 ## PWM OUTPUT
 ## ================================================================
+set_property PACKAGE_PIN F22      [get_ports {freq_sel[0]}]
+set_property PACKAGE_PIN G22      [get_ports {freq_sel[1]}]
+set_property PACKAGE_PIN H22      [get_ports {freq_sel[2]}]
+set_property PACKAGE_PIN F21      [get_ports {freq_sel[3]}]
+set_property IOSTANDARD  LVCMOS18 [get_ports {freq_sel[*]}]
+
+set_property PACKAGE_PIN H19      [get_ports {duty[0]}]
+set_property PACKAGE_PIN H18      [get_ports {duty[1]}]
+set_property PACKAGE_PIN H17      [get_ports {duty[2]}]
+set_property IOSTANDARD  LVCMOS18 [get_ports {duty[*]}]
+
 set_property PACKAGE_PIN Y10 [get_ports {pwm_out}]
 set_property IOSTANDARD LVCMOS33 [get_ports {pwm_out}]
 
@@ -28,10 +39,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {buck_out}]
 ## ================================================================
 ## STATUS SIGNAL (OPTIONAL DEBUG)
 ## ================================================================
-# Either ignore it:
-# set_property DONT_TOUCH true [get_ports {o_tx_busy}]
 
-# OR map to LED if you want:
 set_property PACKAGE_PIN T22 [get_ports {o_tx_busy}]
 set_property IOSTANDARD LVCMOS33 [get_ports {o_tx_busy}]
 

@@ -115,9 +115,7 @@ architecture rtl of uart_top is
         RX_WAIT_55,
         RX_TB_HI,
         RX_TB_LO,
-        RX_VOLT,
         RX_TRIG,
-        RX_CHK,
         RX_WAIT_FF
     );
 
@@ -136,12 +134,9 @@ architecture rtl of uart_top is
         TX_IDLE,
         TX_SEND_AA,
         TX_SEND_55,
-        TX_SEND_LEN,
-        --TX_REQ_DATA,
         TX_SEND_DATA,
         TX_WAIT_BUSY_START,
-        TX_WAIT_BUSY,
-        TX_SEND_CHK
+        TX_WAIT_BUSY
     );
 
     signal tx_state : tx_state_t := TX_IDLE;
@@ -188,14 +183,13 @@ begin
         );
 
     o_tx_busy <= tx_busy_int;
-    o_trig_level <= tb_hi_reg & tb_lo_reg; -- high byte low byte trollface
-    o_trig_type <= '0';
-    o_dec_factor <=trig_reg; -- high byte low byte not trollface
+    o_trig_level <= x"0" & tb_hi_reg(4 downto 0) & tb_lo_reg; -- high byte low byte
+    o_trig_type <= tb_hi_reg(15);
+    o_dec_factor <=trig_reg; -- high byte low byte
 
 
-    -------------------------------------------------------------------------
+    
     -- RX Packet Parser
-    -------------------------------------------------------------------------
     process(i_clk)
 
         variable chk_calc : unsigned(7 downto 0);
@@ -252,46 +246,19 @@ begin
                             rx_state  <= RX_TRIG;
 
                         -----------------------------------------------------
-                        when RX_VOLT =>
-
-                            volt_reg <= rx_data;
-                            rx_state <= RX_TRIG;
-
-                        -----------------------------------------------------
                         when RX_TRIG =>
 
                             trig_reg <= rx_data;
                             rx_state <= RX_WAIT_FF;
 
                         -----------------------------------------------------
-                        when RX_CHK =>
-
-                            chk_reg  <= rx_data;
-                            rx_state <= RX_WAIT_FF;
-
-                        -----------------------------------------------------
                         when RX_WAIT_FF =>
-       
                             o_arm_trig <= '1';
 
-                            if rx_data = x"FF" then
-
-                                chk_calc :=
-                                    unsigned(tb_hi_reg) +
-                                    unsigned(tb_lo_reg) +
-                                    unsigned(volt_reg)  +
-                                    unsigned(trig_reg);
-
-                                if std_logic_vector(chk_calc) = chk_reg then
-
-                                    -------------------------------------------------
-                                    -- Map Python packet fields to wave generator
-                                    -------------------------------------------------
-                                    o_duty     <= volt_reg(3 downto 0);
-                                    o_freq_sel <= trig_reg(3 downto 0);
-
-                                end if;
-                            end if;
+                            --if rx_data = x"FF" then
+                                --o_duty     <= volt_reg(3 downto 0);
+                                --o_freq_sel <= trig_reg(3 downto 0);
+                            --end if;
 
                             rx_state <= RX_WAIT_AA;
 
@@ -303,9 +270,9 @@ begin
     
     end process;
 
-    -------------------------------------------------------------------------
+
     -- TX Packet Generator
-    -------------------------------------------------------------------------
+
     process(i_clk)
     begin
         if rising_edge(i_clk) then
@@ -368,29 +335,6 @@ begin
                         end if;
 
                     ---------------------------------------------------------
-                    when TX_SEND_LEN =>
-
-                        if tx_busy_int = '0' then
-
-                            tx_data_int <= x"00";
-
-                            tx_valid_int <= '1';
-
-                            --tx_state <= TX_REQ_DATA;
-                            --tx_state <= TX_SEND_DATA;
-                            tx_ret_state <= TX_SEND_DATA;
-                            tx_state     <= TX_WAIT_BUSY_START;
-
-                        end if;
-
-                    ---------------------------------------------------------
-                    --when TX_REQ_DATA =>
-
-                        --o_read_req <= '1';
-
-                        --tx_state <= TX_SEND_DATA;
-
-                    ---------------------------------------------------------
                     when TX_SEND_DATA =>
 
                         if tx_busy_int = '0' then
@@ -399,7 +343,7 @@ begin
                             tx_data_int  <= i_tx_data;
                             tx_valid_int <= '1';
 
-                            checksum <= checksum + unsigned(i_tx_data);
+                            --checksum <= checksum + unsigned(i_tx_data);
 
                             tx_ret_state <= TX_WAIT_BUSY;
 
@@ -430,19 +374,6 @@ begin
 
                             end if;
                         end if;
-
-                    ---------------------------------------------------------
-                    when TX_SEND_CHK =>
-
-                        if tx_busy_int = '0' then
-
-                            tx_data_int  <= std_logic_vector(checksum);
-                            tx_valid_int <= '1';
-
-                            tx_state <= TX_IDLE;
-
-                        end if;
-
                 end case;
             end if;
         end if;

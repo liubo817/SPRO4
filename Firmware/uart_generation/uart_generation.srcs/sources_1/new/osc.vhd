@@ -1,5 +1,5 @@
 -- =============================================================================
--- osc.vhd  --  Oscilloscope Top Level (FIXED)
+-- osc.vhd  --  Oscilloscope Top Level
 -- =============================================================================
 library ieee;
 use ieee.std_logic_1164.all;
@@ -37,10 +37,6 @@ entity osc is
 end entity;
 
 architecture Structural of osc is
-
-    -------------------------------------------------------------------------
-    -- UART TOP (MATCHES YOUR LATEST FILE)
-    -------------------------------------------------------------------------
     component uart_top is
         generic (
             G_CLK_HZ : integer;
@@ -74,9 +70,6 @@ architecture Structural of osc is
         );
     end component;
 
-    -------------------------------------------------------------------------
-    -- XADC
-    -------------------------------------------------------------------------
     component xadc_wiz_0
         port (
             dclk_in     : in  std_logic; -- digital clock input
@@ -97,9 +90,6 @@ architecture Structural of osc is
         );
     end component;
 
-    -------------------------------------------------------------------------
-    -- Wave generator (MATCHES YOUR UPDATED VERSION)
-    -------------------------------------------------------------------------
     component wave_generator is
         generic (
             CLK_FREQ_HZ : integer := 100_000_000
@@ -126,9 +116,6 @@ architecture Structural of osc is
         );
     end component;
 
-    -------------------------------------------------------------------------
-    -- Trigger
-    -------------------------------------------------------------------------
     component trigger_struct is
         port (
             t_clk         : in  std_logic;
@@ -155,9 +142,6 @@ architecture Structural of osc is
         );
     end component;
 
-    -------------------------------------------------------------------------
-    -- Signals
-    -------------------------------------------------------------------------
     signal eoc          : std_logic;
     signal drdy         : std_logic;
 
@@ -180,9 +164,6 @@ architecture Structural of osc is
 
 begin
 
-    -------------------------------------------------------------------------
-    -- XADC wiring
-    -------------------------------------------------------------------------
     xadc_data <= xadc_out;
 
     xadc_inst : xadc_wiz_0
@@ -210,9 +191,6 @@ begin
             busy_out    => open -- wedon'tgaf
         );
 
-    -------------------------------------------------------------------------
-    -- UART
-    -------------------------------------------------------------------------
     u_uart : uart_top
         generic map (
             G_CLK_HZ => G_CLK_HZ,
@@ -241,9 +219,6 @@ begin
             o_read_req   => read_req
         );
 
-    -------------------------------------------------------------------------
-    -- Trigger
-    -------------------------------------------------------------------------
     u_trigger : trigger_struct
         port map (
             t_clk         => clk,
@@ -268,10 +243,7 @@ begin
             o_led4 => led4,
             o_led5 => led5
             );
-            
-    -------------------------------------------------------------------------
-    -- Buck PWM generator
-    -------------------------------------------------------------------------
+
     u_buck_pwm : PWM_generator
         generic map (
             CLK_FREQ_HZ => G_CLK_HZ
@@ -282,9 +254,6 @@ begin
             buck_out => buck_out
         );
 
-    -------------------------------------------------------------------------
-    -- Wave generator
-    -------------------------------------------------------------------------
     u_wave : wave_generator
         generic map (
             CLK_FREQ_HZ => G_CLK_HZ

@@ -1,23 +1,12 @@
 -- =============================================================================
 -- wave_generator.vhd
--- ZedBoard PL - PWM generator with switchable frequency and duty cycle
 --
 -- Frequencies (4 DIP switches, one-hot):
 --   SW0 → 100 Hz
 --   SW1 → 200 Hz
 --   SW2 → 500 Hz
 --   SW3 → 1000 Hz
---
--- Inputs:
---   clk      - 100 MHz system clock (GCLK on ZedBoard)
---   reset    - active-high synchronous reset
---   duty     - 3-bit PWM duty (SW7=MSB, SW5=LSB): 8 levels
---               000=0%(0x00)  001=12.5%(0x20)  010=25%(0x40)  011=37.5%(0x60)
---               100=50%(0x80) 101=62.5%(0xA0)  110=75%(0xC0)  111=87.5%(0xE0)
 --   freq_sel - one-hot 4-bit: "0001"=100Hz "0010"=200Hz "0100"=500Hz "1000"=1kHz
---
--- Outputs:
---   pwm_out  - 1-bit PWM signal
 -- =============================================================================
  
 library IEEE;
@@ -26,7 +15,7 @@ use IEEE.NUMERIC_STD.ALL;
  
 entity wave_generator is
     Generic (
-        CLK_FREQ_HZ : integer := 100_000_000   -- ZedBoard PL clock
+        CLK_FREQ_HZ : integer := 100_000_000
     );
     Port (
         clk      : in  STD_LOGIC;
@@ -59,22 +48,17 @@ architecture Behavioral of wave_generator is
  
     signal counter     : unsigned(7 downto 0) := (others => '0');
  
-    -- 2-FF synchroniser registers for all async inputs
     signal freq_sel_s1, freq_sel_sync : STD_LOGIC_VECTOR(3 downto 0) := "0001";
     signal duty_s1,     duty_sync     : STD_LOGIC_VECTOR(2 downto 0) := (others => '0');  -- [FIX: was 3 downto 0]
  
-    -- 3-bit duty expanded to 8-bit threshold (placed at bits [7:5])
     signal duty_8bit : unsigned(7 downto 0);
  
 begin
  
     -- duty_sync(2:0) padded with 5 LSB zeros → 8-bit threshold
     -- e.g. "101" → "10100000" = 0xA0 = 160 → 62.5% of 256
-    duty_8bit <= unsigned(duty_sync & "00000");   -- [FIX: was "0000" (4 zeros → 7-bit concat)]
+    duty_8bit <= unsigned(duty_sync & "00000");   -- [FIX: was "0000" (4 zeros - 7-bit concat)]
  
-    -- =========================================================================
-    -- Stage 1: 2-FF input synchronisers
-    -- =========================================================================
     p_sync : process(clk)
     begin
         if rising_edge(clk) then
@@ -92,9 +76,6 @@ begin
         end if;
     end process p_sync;
  
-    -- =========================================================================
-    -- Stage 2: Frequency selection
-    -- =========================================================================
     p_freq_sel : process(clk)
     begin
         if rising_edge(clk) then
@@ -108,9 +89,6 @@ begin
         end if;
     end process p_freq_sel;
  
-    -- =========================================================================
-    -- Stage 3: Clock-enable generator
-    -- =========================================================================
     p_clk_en : process(clk)
     begin
         if rising_edge(clk) then
@@ -125,10 +103,7 @@ begin
             end if;
         end if;
     end process p_clk_en;
- 
-    -- =========================================================================
-    -- Stage 4: Wave counter
-    -- =========================================================================
+
     p_counter : process(clk)
     begin
         if rising_edge(clk) then
@@ -139,10 +114,7 @@ begin
             end if;
         end if;
     end process p_counter;
- 
-    -- =========================================================================
-    -- Stage 5: PWM output
-    -- =========================================================================
+
     p_outputs : process(clk)
     begin
         if rising_edge(clk) then

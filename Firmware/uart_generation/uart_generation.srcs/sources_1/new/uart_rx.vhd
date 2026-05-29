@@ -31,7 +31,6 @@ architecture Behavioral of uart_rx is
     signal rx_sync  : std_logic_vector(1 downto 0) := "11";  -- 2FF synchroniser
 begin
 
-    -- Double flip-flop synchroniser (prevents metastability on async RX line)
     process(i_clk)
     begin
         if rising_edge(i_clk) then

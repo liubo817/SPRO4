@@ -1,21 +1,10 @@
 ----------------------------------------------------------------------------------
--- shit
+-- trigger_struct.vhd
 ----------------------------------------------------------------------------------
-
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
-
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity trigger_struct is
 port (
@@ -69,13 +58,11 @@ architecture Structural of trigger_struct is
     signal trig_ptr      : unsigned(11 downto 0) := (others => '0');
     signal prev_sample   : unsigned(15 downto 0) := (others => '0');
 
-    -- Configuration Constants (For a 4096 depth BRAM)
     constant PRE_TRIG_DEPTH  : unsigned(11 downto 0) := to_unsigned(2048, 12);
     constant POST_TRIG_DEPTH : unsigned(11 downto 0) := to_unsigned(2047, 12);
     
     signal auto_trig_cnt : unsigned(15 downto 0) := (others => '0');
 
-    -- You can also turn this into an i_auto_timeout input pin later if desired!
     constant AUTO_TIMEOUT_VAL : unsigned(15 downto 0) := x"FFFF";
 
     component decimator is
@@ -104,9 +91,6 @@ begin
         o_dec_output => o_dec_output
     );
     
-    -- -------------------------------------------------------------------------
-    -- MAIN CONTROL FSM & BRAM WRITE PORT (Port A)
-    -- -------------------------------------------------------------------------
     process(t_clk)
     begin
         if rising_edge(t_clk) then
@@ -118,7 +102,7 @@ begin
                 byte_sel      <= '0';
                 prev_sample   <= (others => '0');
             else
-                -- Default assignment: clear valid unless in the transmission state
+                
                 data_valid <= '0';
 
                 case current_state is
@@ -158,10 +142,10 @@ begin
                             o_led5 <= '1';
 
                             if arm_trigger = '1' then
-                                trig_ptr      <= wr_ptr;        -- Latch memory exactly where it is right now
+                                trig_ptr      <= wr_ptr;        
                                 fill_count    <= (others => '0');
                                 auto_trig_cnt <= (others => '0');
-                                current_state <= POST_FILL;     -- Head straight to the finish line
+                                current_state <= POST_FILL;     
                             end if;
                             
                                 -- Trigger Check
@@ -175,7 +159,7 @@ begin
                                     trig_ptr      <= wr_ptr;          -- Capture wherever the pointer is right now
                                     fill_count    <= (others => '0');
                                     auto_trig_cnt <= (others => '0'); -- Clear watchdog
-                                    current_state <= POST_FILL;       -- Gracefully proceed to dump data to Python
+                                    current_state <= POST_FILL;       
                                 end if;
                             
                         end if;
@@ -187,8 +171,7 @@ begin
                             fill_count <= fill_count + 1;
 
                             if fill_count >= POST_TRIG_DEPTH then
-                                -- Memory is perfectly balanced. Stop writing!
-                                -- Calculate the oldest sample location to start readout sequence cleanly
+
                                 rd_ptr        <= trig_ptr - PRE_TRIG_DEPTH; 
                                 fill_count    <= (others => '0');
                                 byte_sel      <= '0';
@@ -197,21 +180,20 @@ begin
                         end if;
 
                     when TX_READY =>
-                        -- Wake up the UART controller
+                        -- Wake up uart
                         data_valid <= '1';
                         
                         -- Process incoming read requests from UART
                         if i_read_req = '1' then
                             if byte_sel = '0' then
-                                -- High byte read complete. Expose the low byte next.
+                                -- High byte read complete
                                 byte_sel <= '1';
                             else
-                                -- Low byte read complete. Advance memory address.
+                                -- Low byte read complete
                                 byte_sel <= '0';
                                 rd_ptr   <= rd_ptr + 1;
                                 fill_count <= fill_count + 1;
                                 
-                                -- Check if all 4096 words (8192 bytes) have been extracted
                                 if fill_count = 4095 then
                                     current_state <= IDLE;
                                 end if;
@@ -220,7 +202,6 @@ begin
 
                 end case;
 
-                -- Track histories only on valid data iterations
                 if dec_data_v = '1' then
                     prev_sample <= unsigned(o_dec_output);
                 end if;
@@ -229,9 +210,6 @@ begin
         end if;
     end process;
     
-    -- -------------------------------------------------------------------------
-    -- PORT B: Read Port (Synchronous BRAM Inferences)
-    -- -------------------------------------------------------------------------
     process(t_clk)
     begin
         if rising_edge(t_clk) then
@@ -239,12 +217,11 @@ begin
         end if;
     end process;
     
-    o_led2 <= i_adc_data(0); -- Bit 0 (Least Significant Bit)
+    o_led2 <= i_adc_data(0); -- Bit 0
     -- o_led3 <= i_adc_data(1); -- Bit 1
     -- o_led4 <= i_adc_data(2); -- Bit 2
     -- o_led5 <= i_adc_data(3); -- Bit 3
     
-    -- Multiplex high and low bytes of the extracted memory data out to your UART
     o_buffer <= bram_read_data(15 downto 8) when byte_sel = '0' else 
                 bram_read_data(7 downto 0);
                 

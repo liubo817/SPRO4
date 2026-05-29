@@ -14,11 +14,11 @@ except ImportError:
 # --------------------------
 # Configuration
 # --------------------------
-USE_FAKE         = False
+USE_FAKE         = True
 COM_PORT         = "COM8"
 BAUD_RATE        = 115200
-BASE_SAMPLE_RATE = 1_000_000   # Hz — ADC clock before decimation
-ADC_MAX_VOLTAGE  = 20.0        # V — full-scale (4096 counts = +20 V)
+BASE_SAMPLE_RATE = 1_000_000   
+ADC_MAX_VOLTAGE  = 10.0        
 ADC_COUNTS       = 4096
 
 def counts_to_volts(c):

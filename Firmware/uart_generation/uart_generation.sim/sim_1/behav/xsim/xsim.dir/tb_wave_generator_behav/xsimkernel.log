@@ -2,3 +2,6 @@ Running: xsim.dir/tb_wave_generator_behav/xsimk.exe -simmode gui -wdb tb_wave_ge
 Design successfully loaded
 Design Loading Memory Usage: 11620 KB (Peak: 11620 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 20248 KB (Peak: 20248 KB)
+Simulation CPU Usage: 217 ms

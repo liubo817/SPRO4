@@ -67,11 +67,11 @@ C_RISE      = "#00ff99"   # RISE edge colour
 C_FALL      = "#cc66ff"   # FALL edge colour
 
 
-def build_config_packet(trigger: int, dec: int, edge: int = 1) -> bytes:
+def build_config_packet(trigger: int, dec: int, edge: int) -> bytes:
     trig    = max(0, min(4095, int(trigger)))
     dec_val = max(0, min(9,   int(dec)))
-    word    = ((1 if edge else 0) << 15) | (trig & 0x0FFF)
-    return bytes([0xAA, 0x55, (word >> 8) & 0xFF, word & 0xFF, dec_val, 0xFF])
+    trig_val    = ((1 if edge else 0) << 15) | (trig & 0x0FFF)
+    return bytes([0xAA, 0x55, (trig_val >> 8) & 0xFF, trig_val & 0xFF, dec_val, 0xFF])
 
 
 # --------------------------

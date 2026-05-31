@@ -1,6 +1,6 @@
 LTspice 24.1.10 for Windows
 Circuit: C:\Users\usnam\Documents\GitHub\SPRO4\Hardware\precondV2\opamp.net
-Start Time: Fri May 29 13:56:40 2026
+Start Time: Fri May 29 14:54:09 2026
 solver = Alternate
 Maximum thread count: 16
 tnom = 27
@@ -59,7 +59,9 @@ Gmin = 4.54017e-13
 Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
-Total elapsed time: 23.930 seconds.
+
+Simulation stopped by user.
+Total elapsed time: 12.983 seconds.
 
 Files loaded:
 C:\Users\usnam\Documents\GitHub\SPRO4\Hardware\precondV2\opamp.net

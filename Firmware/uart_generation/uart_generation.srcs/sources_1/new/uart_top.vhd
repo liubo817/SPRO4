@@ -5,10 +5,6 @@
 -- RX Packet from Python:
 --   AA 55 TB_HI TB_LO VOLT TRIG CHK FF
 --
--- Mapping:
---   VOLT[3:0] -> PWM duty
---   TRIG[3:0] -> Frequency select
---
 -- TX Packet to Python:
 --   AA 55 LEN DATA... CHK
 -- =============================================================================
@@ -51,12 +47,7 @@ entity uart_top is
         o_tx_busy    : out std_logic;
         
         o_led : out std_logic;
-
-        ---------------------------------------------------------------------
-        -- Wave generator controls
-        ---------------------------------------------------------------------
-        o_duty       : out std_logic_vector(3 downto 0);
-        o_freq_sel   : out std_logic_vector(3 downto 0)
+        o_led2 : out std_logic
     );
 end entity;
 
@@ -183,8 +174,8 @@ begin
         );
 
     o_tx_busy <= tx_busy_int;
-    o_trig_level <= x"0" & tb_hi_reg(4 downto 0) & tb_lo_reg; -- high byte low byte
-    o_trig_type <= tb_hi_reg(15);
+    o_trig_level <= x"0" & tb_hi_reg(3 downto 0) & tb_lo_reg; -- high byte low byte
+    o_trig_type <= tb_hi_reg(7);
     o_dec_factor <=trig_reg; -- high byte low byte
 
 
@@ -202,13 +193,9 @@ begin
                 rx_state <= RX_WAIT_AA;
                 
                 trig_reg <= x"7F";
-                o_trig_type <= '0';
                 tb_hi_reg <= x"01";
-
+                o_led2<='0';
                 
-
-                o_duty     <= "1000"; -- 50%
-                o_freq_sel <= "0001"; -- 100 Hz
 
             else
                 o_arm_trig <= '0';
@@ -226,7 +213,7 @@ begin
 
                         -----------------------------------------------------
                         when RX_WAIT_55 =>
-
+                            o_led2<='1';
                             if rx_data = x"55" then
                                 rx_state <= RX_TB_HI;
                             else
@@ -255,11 +242,7 @@ begin
                         when RX_WAIT_FF =>
                             o_arm_trig <= '1';
 
-                            --if rx_data = x"FF" then
-                                --o_duty     <= volt_reg(3 downto 0);
-                                --o_freq_sel <= trig_reg(3 downto 0);
-                            --end if;
-
+                            o_led2<='0';
                             rx_state <= RX_WAIT_AA;
 
                     end case;

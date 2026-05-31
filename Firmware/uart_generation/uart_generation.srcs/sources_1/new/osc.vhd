@@ -1,5 +1,5 @@
 -- =============================================================================
--- osc.vhd  --  Oscilloscope Top Level
+-- osc.vhd  --  Oscilloscope Top Level (FIXED)
 -- =============================================================================
 library ieee;
 use ieee.std_logic_1164.all;
@@ -29,6 +29,10 @@ entity osc is
         led3 : out std_logic;
         led4 : out std_logic;
         led5 : out std_logic;
+        led6 : out std_logic;
+        
+        freq_sel : in std_logic_vector(3 downto 0);
+        duty : in std_logic_vector(2 downto 0);
 
         -- Wave outputs
         pwm_out     : out std_logic;
@@ -37,6 +41,10 @@ entity osc is
 end entity;
 
 architecture Structural of osc is
+
+    -------------------------------------------------------------------------
+    -- UART TOP (MATCHES YOUR LATEST FILE)
+    -------------------------------------------------------------------------
     component uart_top is
         generic (
             G_CLK_HZ : integer;
@@ -59,9 +67,7 @@ architecture Structural of osc is
             i_rx         : in  std_logic;
             
             o_led : out std_logic;
-
-            o_duty       : out std_logic_vector(3 downto 0);
-            o_freq_sel   : out std_logic_vector(3 downto 0);
+            o_led2 : out std_logic;
 
             i_trig_good  : in  std_logic;
             o_read_req   : out std_logic
@@ -70,6 +76,9 @@ architecture Structural of osc is
         );
     end component;
 
+    -------------------------------------------------------------------------
+    -- XADC
+    -------------------------------------------------------------------------
     component xadc_wiz_0
         port (
             dclk_in     : in  std_logic; -- digital clock input
@@ -90,6 +99,9 @@ architecture Structural of osc is
         );
     end component;
 
+    -------------------------------------------------------------------------
+    -- Wave generator (MATCHES YOUR UPDATED VERSION)
+    -------------------------------------------------------------------------
     component wave_generator is
         generic (
             CLK_FREQ_HZ : integer := 100_000_000
@@ -97,7 +109,7 @@ architecture Structural of osc is
         port (
             clk      : in  std_logic;
             reset    : in  std_logic;
-            duty     : in  std_logic_vector(3 downto 0);
+            duty     : in  std_logic_vector(2 downto 0);
             freq_sel : in  std_logic_vector(3 downto 0);
             pwm_out  : out std_logic
         );
@@ -116,6 +128,9 @@ architecture Structural of osc is
         );
     end component;
 
+    -------------------------------------------------------------------------
+    -- Trigger
+    -------------------------------------------------------------------------
     component trigger_struct is
         port (
             t_clk         : in  std_logic;
@@ -142,6 +157,9 @@ architecture Structural of osc is
         );
     end component;
 
+    -------------------------------------------------------------------------
+    -- Signals
+    -------------------------------------------------------------------------
     signal eoc          : std_logic;
     signal drdy         : std_logic;
 
@@ -159,11 +177,11 @@ architecture Structural of osc is
     signal dec_factor   : std_logic_vector(7 downto 0);
     signal arm_trigger  : std_logic;
 
-    signal duty_sig     : std_logic_vector(3 downto 0);
-    signal freq_sel_sig : std_logic_vector(3 downto 0);
-
 begin
 
+    -------------------------------------------------------------------------
+    -- XADC wiring
+    -------------------------------------------------------------------------
     xadc_data <= xadc_out;
 
     xadc_inst : xadc_wiz_0
@@ -191,6 +209,9 @@ begin
             busy_out    => open -- wedon'tgaf
         );
 
+    -------------------------------------------------------------------------
+    -- UART
+    -------------------------------------------------------------------------
     u_uart : uart_top
         generic map (
             G_CLK_HZ => G_CLK_HZ,
@@ -211,14 +232,15 @@ begin
             o_tx         => o_tx,
             i_rx         => i_rx,
 
-            o_duty       => duty_sig,
-            o_freq_sel   => freq_sel_sig,
-
             i_trig_good  => trig_good,
             o_led => led,
+            o_led2 => led6,
             o_read_req   => read_req
         );
 
+    -------------------------------------------------------------------------
+    -- Trigger
+    -------------------------------------------------------------------------
     u_trigger : trigger_struct
         port map (
             t_clk         => clk,
@@ -243,7 +265,10 @@ begin
             o_led4 => led4,
             o_led5 => led5
             );
-
+            
+    -------------------------------------------------------------------------
+    -- Buck PWM generator
+    -------------------------------------------------------------------------
     u_buck_pwm : PWM_generator
         generic map (
             CLK_FREQ_HZ => G_CLK_HZ
@@ -254,6 +279,9 @@ begin
             buck_out => buck_out
         );
 
+    -------------------------------------------------------------------------
+    -- Wave generator
+    -------------------------------------------------------------------------
     u_wave : wave_generator
         generic map (
             CLK_FREQ_HZ => G_CLK_HZ
@@ -261,8 +289,8 @@ begin
         port map (
             clk      => clk,
             reset    => reset,
-            duty     => duty_sig,
-            freq_sel => freq_sel_sig,
+            duty     => duty,
+            freq_sel => freq_sel,
             pwm_out  => pwm_out
         );
 

@@ -14,7 +14,7 @@ except ImportError:
 # --------------------------
 # Configuration
 # --------------------------
-USE_FAKE         = True
+USE_FAKE         = False
 COM_PORT         = "COM8"
 BAUD_RATE        = 115200
 BASE_SAMPLE_RATE = 1_000_000   

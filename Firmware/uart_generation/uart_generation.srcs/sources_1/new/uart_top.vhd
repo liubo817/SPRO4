@@ -3,7 +3,7 @@
 -- UART interface for Python oscilloscope + wave generator
 --
 -- RX Packet from Python:
---   AA 55 TB_HI TB_LO VOLT TRIG CHK FF
+--   AA 55 TB_HI TB_LO TRIG  FF
 --
 -- TX Packet to Python:
 --   AA 55 LEN DATA... CHK
@@ -18,17 +18,12 @@ entity uart_top is
         G_CLK_HZ     : integer := 100_000_000;
         G_BAUD       : integer := 115200;
         G_FRAME_SIZE : integer := 8192
-        ---------------------------------------------------------------------
-        -- System
-        ---------------------------------------------------------------------
+
         );
         port (
         i_clk        : in  std_logic;
         i_rst        : in  std_logic;
 
-        ---------------------------------------------------------------------
-        -- ADC / Trigger interface
-        ---------------------------------------------------------------------
         i_tx_data    : in  std_logic_vector(7 downto 0);
         i_adc_valid  : in  std_logic;
         i_trig_good  : in  std_logic;
@@ -39,9 +34,6 @@ entity uart_top is
         o_dec_factor : out std_logic_vector(7 downto 0);
         o_arm_trig   : out std_logic;
 
-        ---------------------------------------------------------------------
-        -- UART pins
-        ---------------------------------------------------------------------
         i_rx         : in  std_logic;
         o_tx         : out std_logic;
         o_tx_busy    : out std_logic;
@@ -53,9 +45,6 @@ end entity;
 
 architecture rtl of uart_top is
 
-    -------------------------------------------------------------------------
-    -- UART TX component
-    -------------------------------------------------------------------------
     component uart_tx is
         generic (
             G_CLK_HZ : integer;
@@ -71,9 +60,6 @@ architecture rtl of uart_top is
         );
     end component;
 
-    -------------------------------------------------------------------------
-    -- UART RX component
-    -------------------------------------------------------------------------
     component uart_rx is
         generic (
             G_CLK_HZ : integer;
@@ -88,9 +74,6 @@ architecture rtl of uart_top is
         );
     end component;
 
-    -------------------------------------------------------------------------
-    -- UART signals
-    -------------------------------------------------------------------------
     signal rx_data      : std_logic_vector(7 downto 0);
     signal rx_valid     : std_logic;
 
@@ -98,9 +81,6 @@ architecture rtl of uart_top is
     signal tx_valid_int : std_logic;
     signal tx_busy_int  : std_logic;
 
-    -------------------------------------------------------------------------
-    -- RX FSM
-    -------------------------------------------------------------------------
     type rx_state_t is (
         RX_WAIT_AA,
         RX_WAIT_55,
@@ -118,9 +98,6 @@ architecture rtl of uart_top is
     signal trig_reg  : std_logic_vector(7 downto 0);
     signal chk_reg   : std_logic_vector(7 downto 0);
 
-    -------------------------------------------------------------------------
-    -- TX FSM
-    -------------------------------------------------------------------------
     type tx_state_t is (
         TX_IDLE,
         TX_SEND_AA,
@@ -140,9 +117,6 @@ architecture rtl of uart_top is
 
 begin
 
-    -------------------------------------------------------------------------
-    -- UART transmitter
-    -------------------------------------------------------------------------
     u_tx : uart_tx
         generic map (
             G_CLK_HZ => G_CLK_HZ,
@@ -157,9 +131,6 @@ begin
             o_tx    => o_tx
         );
 
-    -------------------------------------------------------------------------
-    -- UART receiver
-    -------------------------------------------------------------------------
     u_rx : uart_rx
         generic map (
             G_CLK_HZ => G_CLK_HZ,
@@ -204,14 +175,12 @@ begin
 
                     case rx_state is
 
-                        -----------------------------------------------------
                         when RX_WAIT_AA =>
 
                             if rx_data = x"AA" then
                                 rx_state <= RX_WAIT_55;
                             end if;
 
-                        -----------------------------------------------------
                         when RX_WAIT_55 =>
                             o_led2<='1';
                             if rx_data = x"55" then
@@ -220,25 +189,21 @@ begin
                                 rx_state <= RX_WAIT_AA;
                             end if;
 
-                        -----------------------------------------------------
                         when RX_TB_HI =>
 
                             tb_hi_reg <= rx_data;
                             rx_state  <= RX_TB_LO;
 
-                        -----------------------------------------------------
                         when RX_TB_LO =>
 
                             tb_lo_reg <= rx_data;
                             rx_state  <= RX_TRIG;
 
-                        -----------------------------------------------------
                         when RX_TRIG =>
 
                             trig_reg <= rx_data;
                             rx_state <= RX_WAIT_FF;
 
-                        -----------------------------------------------------
                         when RX_WAIT_FF =>
                             o_arm_trig <= '1';
 
@@ -278,7 +243,6 @@ begin
 
                 case tx_state is
 
-                    ---------------------------------------------------------
                     when TX_IDLE =>
 
                         if i_trig_good = '1' then
@@ -290,7 +254,6 @@ begin
 
                         end if;
 
-                    ---------------------------------------------------------
                     when TX_SEND_AA =>
 
                         if tx_busy_int = '0' then
@@ -304,7 +267,6 @@ begin
                         end if;
                         o_led <='1';
 
-                    ---------------------------------------------------------
                     when TX_SEND_55 =>
 
                         if tx_busy_int = '0' then
@@ -317,7 +279,6 @@ begin
 
                         end if;
 
-                    ---------------------------------------------------------
                     when TX_SEND_DATA =>
 
                         if tx_busy_int = '0' then
@@ -340,7 +301,6 @@ begin
                             tx_state <= tx_ret_state;
                         end if;
 
-                    ---------------------------------------------------------
                     when TX_WAIT_BUSY =>
 
                         if tx_busy_int = '0' then

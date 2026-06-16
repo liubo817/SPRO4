@@ -5,8 +5,8 @@ use IEEE.NUMERIC_STD.ALL;
 entity PWM_generator is
     Generic (
         CLK_FREQ_HZ  : integer := 100_000_000;
-        PWM_FREQ_HZ  : integer := 15_000;    -- change this: 10000–20000
-        DUTY_PERCENT : integer := 50         -- change this: 0–100
+        PWM_FREQ_HZ  : integer := 15_000;    
+        DUTY_PERCENT : integer := 66         
     );
     Port (
         clk     : in  STD_LOGIC;

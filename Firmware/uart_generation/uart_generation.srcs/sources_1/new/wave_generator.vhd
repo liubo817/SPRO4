@@ -20,8 +20,8 @@ entity wave_generator is
     Port (
         clk      : in  STD_LOGIC;
         reset    : in  STD_LOGIC;
-        duty     : in  STD_LOGIC_VECTOR(2 downto 0);  -- SW7=MSB, SW5=LSB  [FIX: was 3 downto 0]
-        freq_sel : in  STD_LOGIC_VECTOR(3 downto 0);  -- one-hot, see above
+        duty     : in  STD_LOGIC_VECTOR(2 downto 0);  
+        freq_sel : in  STD_LOGIC_VECTOR(3 downto 0);  
         pwm_out  : out STD_LOGIC
     );
 end wave_generator;
@@ -37,10 +37,10 @@ architecture Behavioral of wave_generator is
     --   500 Hz  → 100 000 000 / (500  × 256) =  781  (actual: 500.32 Hz)
     --  1000 Hz  → 100 000 000 / (1000 × 256) =  390  (actual: 1001.6 Hz)
     -- -------------------------------------------------------------------------
-    constant DIV_100HZ : integer := CLK_FREQ_HZ / (100  * 256);  -- 3906
-    constant DIV_200HZ : integer := CLK_FREQ_HZ / (200  * 256);  -- 1953
-    constant DIV_500HZ : integer := CLK_FREQ_HZ / (500  * 256);  --  781
-    constant DIV_1KHZ  : integer := CLK_FREQ_HZ / (1000 * 256);  --  390
+    constant DIV_100HZ : integer := CLK_FREQ_HZ / (100  * 256);  
+    constant DIV_200HZ : integer := CLK_FREQ_HZ / (200  * 256);  
+    constant DIV_500HZ : integer := CLK_FREQ_HZ / (500  * 256);  
+    constant DIV_1KHZ  : integer := CLK_FREQ_HZ / (1000 * 256);  
  
     signal clk_div_max : integer range 1 to DIV_100HZ := DIV_100HZ;
     signal div_counter : integer range 0 to DIV_100HZ := 0;
@@ -49,7 +49,7 @@ architecture Behavioral of wave_generator is
     signal counter     : unsigned(7 downto 0) := (others => '0');
  
     signal freq_sel_s1, freq_sel_sync : STD_LOGIC_VECTOR(3 downto 0) := "0001";
-    signal duty_s1,     duty_sync     : STD_LOGIC_VECTOR(2 downto 0) := (others => '0');  -- [FIX: was 3 downto 0]
+    signal duty_s1,     duty_sync     : STD_LOGIC_VECTOR(2 downto 0) := (others => '0'); 
  
     signal duty_8bit : unsigned(7 downto 0);
  
@@ -57,7 +57,7 @@ begin
  
     -- duty_sync(2:0) padded with 5 LSB zeros → 8-bit threshold
     -- e.g. "101" → "10100000" = 0xA0 = 160 → 62.5% of 256
-    duty_8bit <= unsigned(duty_sync & "00000");   -- [FIX: was "0000" (4 zeros - 7-bit concat)]
+    duty_8bit <= unsigned(duty_sync & "00000");   
  
     p_sync : process(clk)
     begin

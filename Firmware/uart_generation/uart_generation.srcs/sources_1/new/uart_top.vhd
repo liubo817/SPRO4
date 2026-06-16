@@ -3,7 +3,7 @@
 -- UART interface for Python oscilloscope + wave generator
 --
 -- RX Packet from Python:
---   AA 55 TB_HI TB_LO TRIG  FF
+--   AA 55 TB_HI TB_LO DEC  FF
 --
 -- TX Packet to Python:
 --   AA 55 LEN DATA... CHK

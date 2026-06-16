@@ -1,13 +1,13 @@
 LTspice 26.0.1 for Windows
 Circuit: C:\Users\vikip\Desktop\GitHub Repos\SPRO4\Hardware\Simulation\Precondition.net
-Start Time: Mon Jun 15 12:28:44 2026
+Start Time: Tue Jun 16 12:31:31 2026
 solver = Normal
 Maximum thread count: 8
 tnom = 27
 temp = 27
 method = trap
 Direct Newton iteration succeeded in finding operating point.
-Total elapsed time: 0.300 seconds.
+Total elapsed time: 0.305 seconds.
 
 Files loaded:
 C:\Users\vikip\Desktop\GitHub Repos\SPRO4\Hardware\Simulation\Precondition.net
